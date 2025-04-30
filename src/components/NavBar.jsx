@@ -8,16 +8,16 @@ export default function Navbar() {
       <div className="nav-line"></div>
       <ul className="nav-links">
         <li>
-          <Link to="/"></Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/destination"></Link>
+          <Link to="/destination">Destination</Link>
         </li>
         <li>
-          <Link to="/crew"></Link>
+          <Link to="/crew">Crew</Link>
         </li>
         <li>
-          <Link to="/technology"></Link>
+          <Link to="/technology">Technology</Link>
         </li>
       </ul>
     </nav>
