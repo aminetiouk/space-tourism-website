@@ -1,18 +1,25 @@
-import Crew from "./Crew";
-import Destination from "./Destination";
-import Home from "./Home";
-import Technology from "./Technology";
+import { Link } from 'react-router-dom';
+import logo from '../assets/shared/logo.svg';
 
-export default function NavBar() {
+export default function Navbar() {
   return (
-    <header>
-      <img src="" alt="" />
-      <nav>
-        <Home />
-        <Destination />
-        <Crew />
-        <Technology />
-      </nav>
-    </header>
-  )
+    <nav className="navbar">
+      <img src={logo} alt="logo" className="nav-logo" />
+      <div className="nav-line"></div>
+      <ul className="nav-links">
+        <li>
+          <Link to="/"></Link>
+        </li>
+        <li>
+          <Link to="/destination"></Link>
+        </li>
+        <li>
+          <Link to="/crew"></Link>
+        </li>
+        <li>
+          <Link to="/technology"></Link>
+        </li>
+      </ul>
+    </nav>
+  );
 }
