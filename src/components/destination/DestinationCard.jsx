@@ -1,7 +1,19 @@
-export default function DestinationCard({name, image, description, distance, travelTime}) {
+const images = import.meta.glob('/src/assets/destination/*.{png,webp}', {
+  eager: true,
+  as: 'url'
+});
+
+export default function DestinationCard({
+  name,
+  description,
+  distance,
+  travelTime,
+  imageKey
+}) {
+  const imgSrc = images[`/src/assets/destination/${imageKey}`];
   return (
     <div className="destination">
-      <img src={image} alt={name} className="destination-image" />
+      <img src={imgSrc} alt={name} className="destination-image" />
 
       <div className="destination-info">
         <h2>{name}</h2>
@@ -19,5 +31,5 @@ export default function DestinationCard({name, image, description, distance, tra
         </div>
       </div>
     </div>
-  )
+  );
 }
