@@ -1,9 +1,8 @@
-import { Link } from 'react-router-dom';
-import background from 'src/assets/home/background-home-desktop.jpg';
+import { Link } from "react-router-dom";
+
 export default function Home() {
   return (
-    <div className='home'>
-      <img src={background} alt="background" className="home-background" />
+    <div className="home">
       <div className="hero">
         <section className="hero-text">
           <p>SO, YOU WANT TO TRAVEL TO</p>
