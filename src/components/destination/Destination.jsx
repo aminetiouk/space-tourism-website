@@ -4,8 +4,16 @@ import DestinationCard from './DestinationCard';
 
 export default function Destination() {
   const destinations = data.destinations;
-  const [current, setCurrent] = useState(0);
-  const destination = destinations[current];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+
+  const handleTabClick = index => {
+    setCurrentIndex(index);
+  };
+
+  const currentDestination = destinations[currentIndex];
+  const imageKey = currentDestination.images.webp.split('/').pop();
+
   return (
     <div className="destination-page">
       <h1>
@@ -13,12 +21,20 @@ export default function Destination() {
       </h1>
 
       <nav className="destination-tabs">
-        {destinations.map((d, index) => (
-          <button key={d.name} onClick={() => setCurrent(index)} />
+        {destinations.map((dest, index) => (
+          <button key={dest.name} onClick={() => handleTabClick(index)}>
+            {dest.name}
+          </button>
         ))}
       </nav>
 
-      <DestinationCard {...destination} />
+      <DestinationCard 
+        name={currentDestination.name}
+        description={currentDestination.description}
+        distance={currentDestination.distance}
+        travelTime={currentDestination.travel}
+        imageKey={imageKey}
+      />
     </div>
   );
 }
