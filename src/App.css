@@ -1,0 +1,158 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: initial;
+}
+
+button {
+  font: inherit;
+  border: initial;
+  outline: initial; /* create alternative for focus state */
+  background-color: initial;
+}
+
+input {
+  border: initial;
+  outline: initial; /* create alternative for focus state */
+  font: inherit;
+}
+
+/* UTILITIES */
+.u-bold {
+  font-weight: 700;
+}
+
+/* BASE */
+
+:root {
+  /* COLORS */
+  --blue-900: #0b0d17;
+  --blue-300: #d0d6f9;
+  --white: #ffffff;
+
+  --color-rgb-blue-900: 11, 13, 23;
+  --color-rgb-blue-300: 208, 214, 249;
+  --color-rgb-white: 255, 255, 255;
+
+  --color-hsl-blue-900: 230, 35%, 7%;
+  --color-hsl-blue-300: 231, 77%, 90%;
+  --color-hsl-white: 0, 0%, 100%;
+
+  /* SPACING (scale in px) */
+  --space-1600: 128px;
+  --space-1200: 96px;
+  --space-1000: 80px;
+  --space-800: 64px;
+  --space-600: 48px;
+  --space-500: 40px;
+  --space-400: 32px;
+  --space-300: 24px;
+  --space-200: 16px;
+  --space-150: 12px;
+  --space-100: 8px;
+  --space-50: 4px;
+  --space-25: 2px;
+}
+
+/* TYPOGRAPHY */
+body {
+  font-family: 'Barlow', sans-serif;
+  color: var(--white);
+  background-color: var(--blue-900);
+  margin: 0;
+  padding: 0;
+}
+
+/* Bellefair Text Presets */
+.text-preset-1 {
+  font-family: 'Bellefair', serif;
+  font-size: 144px;
+  line-height: 1.719;
+  letter-spacing: 0px;
+}
+
+.text-preset-2 {
+  font-family: 'Bellefair', serif;
+  font-size: 100px;
+  line-height: 1.146;
+  letter-spacing: 0px;
+}
+
+.text-preset-3 {
+  font-family: 'Bellefair', serif;
+  font-size: 56px;
+  line-height: 1.142;
+  letter-spacing: 0px;
+}
+
+.text-preset-4 {
+  font-family: 'Bellefair', serif;
+  font-size: 32px;
+  line-height: 1.147;
+  letter-spacing: 0px;
+}
+
+.text-preset-6 {
+  font-family: 'Bellefair', serif;
+  font-size: 28px;
+  line-height: 1.146;
+  letter-spacing: 0px;
+}
+
+/* Barlow Condensed Presets */
+.text-preset-5 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.text-preset-7 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.text-preset-8 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.text-preset-9 {
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: 0px;
+}
+
+/* Utility Classes */
+.text-white {
+  color: var(--white);
+}
+
+.bg-blue-900 {
+  background-color: var(--blue-900);
+}
+
+.bg-blue-300 {
+  background-color: var(--blue-300);
+}
