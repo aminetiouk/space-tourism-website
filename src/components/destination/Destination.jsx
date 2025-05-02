@@ -5,12 +5,6 @@ import DestinationCard from './DestinationCard';
 export default function Destination() {
   const destinations = data.destinations;
   const [currentIndex, setCurrentIndex] = useState(0);
-
-
-  const handleTabClick = index => {
-    setCurrentIndex(index);
-  };
-
   const currentDestination = destinations[currentIndex];
   const imageKey = currentDestination.images.webp.split('/').pop();
 
@@ -21,11 +15,18 @@ export default function Destination() {
       </h1>
 
       <nav className="destination-tabs">
-        {destinations.map((dest, index) => (
-          <button key={dest.name} onClick={() => handleTabClick(index)}>
-            {dest.name}
-          </button>
-        ))}
+        <ul>
+          {destinations.map((destination, index) => (
+            <li key={destination.name}>
+              <button
+                className={index === currentIndex ? 'destination-tabs__active' : ''}
+                onClick={() => setCurrentIndex(index)}
+              >
+                {destination.name.toUpperCase()}
+              </button>
+            </li>
+          ))}
+        </ul>
       </nav>
 
       <DestinationCard 
