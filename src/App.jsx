@@ -1,14 +1,20 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Home from './components/Home'
 import Crew from './components/crew/Crew'
 import Technology from './components/technology/Technology'
-import Navbar from './components/NavBar';
 import Destination from './components/destination/Destination';
+import Background from './components/Background';
+import Navbar from './components/Navbar';
 
 function App() {
+
+  const location = useLocation();
+  const page = location.pathname.split('/')[1] || 'home';
+
   return (
     <>
       <Navbar />
+      <Background page={page} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/destination" element={<Destination />} />
