@@ -72,8 +72,6 @@ body {
   font-family: 'Barlow', sans-serif;
   color: var(--white);
   background-color: var(--blue-900);
-  margin: 0;
-  padding: 0;
 }
 
 /* Bellefair Text Presets */
@@ -155,4 +153,71 @@ body {
 
 .bg-blue-300 {
   background-color: var(--blue-300);
+}
+
+.background {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.background--home {
+  background-image: url('/src/assets/home/background-home-desktop.jpg');
+}
+.background--destination {
+  background-image: url('/src/assets/destination/background-destination-desktop.jpg');
+}
+.background--crew {
+  background-image: url('/src/assets/crew/background-crew-desktop.jpg');
+}
+.background--technology {
+  background-image: url('/src/assets/technology/background-technology-desktop.jpg');
+}
+
+/* Home */
+.home {
+}
+
+.hero {
+}
+
+.hero-text {
+}
+
+.hero-text p:nth-of-type(1) {
+}
+.hero-text p:nth-of-type(2) {
+  font-size: 4rem;
+}
+.hero-text p:nth-of-type(3) {
+}
+
+.hero-button {
+  font-size: 4rem;
+  color: var(--white);
+}
+
+/* Header */
+.navbar {
+  height: 136px;
+}
+
+.nav-content {
+  height: 96px;
+}
+
+.nav-logo {
+  height: 48px;
+  width: 48px;
+}
+
+.nav-line {
+}
+
+.nav-links {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
