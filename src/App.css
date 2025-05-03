@@ -184,28 +184,30 @@ body {
 .home {
   height: calc(100vh - 80px - 40px);
   display: flex;
-  padding: var(--space-1600) 10rem;
+  padding: var(--space-1600) 11rem;
 }
 
 .hero {
-  display: flex;
-  gap: 15rem;
+  display: grid;
   margin-top: auto;
-  justify-content: space-between;
-}
-
-.hero-text {
-  flex: 1;
-}
-
-.hero a {
-  align-self: center;
+  grid-template-columns: 1fr 1fr;
 }
 
 .hero-button {
-  font-size: 4rem;
-  color: var(--white);
-  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-900);
+  background-color: var(--white);
+  height: 272px;
+  width: 272px;
+  border-radius: 50%;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
 /* Header */
@@ -226,7 +228,7 @@ body {
 
 .nav-line {
   height: 1px;
-  width: clamp(100px, 45vw, 1000px);
+  width: clamp(100px, 43vw, 900px);
   background-color: rgba(255, 255, 255, 0.2);
   margin-left: 20px;
   z-index: 999;
@@ -241,6 +243,7 @@ body {
   height: 80px;
   width: calc(100vw / 2);
   margin-left: auto;
+  padding-right: 5rem;
   justify-content: end;
   align-items: center;
   gap: 46px;

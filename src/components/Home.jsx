@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
@@ -14,10 +14,11 @@ export default function Home() {
             world experience!
           </p>
         </section>
-
-        <Link to="/destination">
-          <button className="hero-button text-preset-4">EXPLORE</button>
-        </Link>
+        <div className="button">
+          <Link to="/destination">
+            <button className="hero-button text-preset-4">EXPLORE</button>
+          </Link>
+        </div>
       </div>
     </div>
   );
