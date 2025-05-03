@@ -1,5 +1,9 @@
+import PageWrapper from '../PageWrapper';
+
 export default function Crew() {
   return (
-    <div>Crew</div>
-  )
+    <PageWrapper>
+      <div>Crew</div>
+    </PageWrapper>
+  );
 }
