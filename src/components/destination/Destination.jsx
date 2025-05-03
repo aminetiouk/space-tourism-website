@@ -12,7 +12,7 @@ export default function Destination() {
   return (
     <PageWrapper>
       <div className="destination-page">
-        <h1>
+        <h1 className="text-preset-5">
           <span>01</span> PICK YOUR DESTINATION
         </h1>
 
@@ -21,9 +21,9 @@ export default function Destination() {
             {destinations.map((destination, index) => (
               <li key={destination.name}>
                 <button
-                  className={
-                    index === currentIndex ? 'destination-tabs__active' : ''
-                  }
+                  className={` destination-nav text-preset-8
+                    ${index === currentIndex ? 'destination-tabs__active' : ''}
+                  `}
                   onClick={() => setCurrentIndex(index)}
                 >
                   {destination.name.toUpperCase()}
@@ -34,7 +34,7 @@ export default function Destination() {
         </nav>
 
         <DestinationCard
-          name={currentDestination.name}
+          name={currentDestination.name.toUpperCase()}
           description={currentDestination.description}
           distance={currentDestination.distance}
           travelTime={currentDestination.travel}
