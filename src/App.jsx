@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar page={page} />
       <Background page={page} />
       <Routes>
         <Route path="/" element={<Home />} />
