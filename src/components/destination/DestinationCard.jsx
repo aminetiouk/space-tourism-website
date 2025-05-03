@@ -16,17 +16,17 @@ export default function DestinationCard({
       <img src={imgSrc} alt={name} className="destination-image" />
 
       <div className="destination-info">
-        <h2>{name}</h2>
-        <p>{description}</p>
+        <h2 className="text-preset-2">{name}</h2>
+        <p className="text-preset-9">{description}</p>
 
         <div className="destination-meta">
           <div>
-            <h3>AVG. DISTANCE</h3>
-            <p>{distance}</p>
+            <h3 className="text-preset-7">AVG. DISTANCE</h3>
+            <p className="text-preset-6">{distance}</p>
           </div>
           <div>
-            <h3>Est. travel time</h3>
-            <p>{travelTime}</p>
+            <h3 className="text-preset-7">Est. travel time</h3>
+            <p className="text-preset-6">{travelTime}</p>
           </div>
         </div>
       </div>
