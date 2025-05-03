@@ -202,22 +202,39 @@ body {
 
 /* Header */
 .navbar {
-  height: 136px;
+  margin-top: 40px;
 }
 
 .nav-content {
-  height: 96px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-logo {
   height: 48px;
   width: 48px;
+  margin-left: 40px;
 }
 
 .nav-line {
+  height: 1px;
+  width: clamp(100px, 55vw, 650px);
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-left: 20px;
+  z-index: 999;
+  position: absolute;
+  left: 100px;
 }
 
 .nav-links {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, .1);
   backdrop-filter: blur(10px);
+  display: flex;
+  height: 96px;
+  width: calc(100vw / 2);
+  margin-left: auto;
+  padding-right: 48px;
+  justify-content: end;
+  align-items: center;
+  gap: 46px;
 }
