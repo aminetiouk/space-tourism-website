@@ -8,17 +8,25 @@ export default function Navbar() {
         <img src={logo} alt="logo" className="nav-logo" />
         <div className="nav-line"></div>
         <ul className="nav-links">
-          <li>
-            <Link to="/">Home</Link>
+          <li className="text-preset-8">
+            <Link to="/">
+              <span className="u-bold">00</span> Home
+            </Link>
           </li>
-          <li>
-            <Link to="/destination">Destination</Link>
+          <li className="text-preset-8">
+            <Link to="/destination">
+              <span className="u-bold">01</span> Destination
+            </Link>
           </li>
-          <li>
-            <Link to="/crew">Crew</Link>
+          <li className="text-preset-8">
+            <Link to="/crew">
+              <span className="u-bold">03</span> Crew
+            </Link>
           </li>
-          <li>
-            <Link to="/technology">Technology</Link>
+          <li className="text-preset-8">
+            <Link to="/technology">
+              <span className="u-bold">04</span> Technology
+            </Link>
           </li>
         </ul>
       </div>
