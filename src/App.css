@@ -218,23 +218,37 @@ body {
 
 .nav-line {
   height: 1px;
-  width: clamp(100px, 55vw, 650px);
+  width: clamp(100px, 45vw, 1000px);
   background-color: rgba(255, 255, 255, 0.2);
   margin-left: 20px;
   z-index: 999;
-  position: absolute;
   left: 100px;
+  position: absolute;
 }
 
 .nav-links {
   background-color: rgba(255, 255, 255, .1);
   backdrop-filter: blur(10px);
   display: flex;
-  height: 96px;
+  padding: 35px 48px 35px 0;
   width: calc(100vw / 2);
   margin-left: auto;
-  padding-right: 48px;
   justify-content: end;
   align-items: center;
   gap: 46px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+
+.active::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  left: 0;
+  bottom: -35px;
 }
