@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import data from '../../assets/data.json';
 import DestinationCard from './DestinationCard';
+import PageWrapper from '../PageWrapper';
 
 export default function Destination() {
   const destinations = data.destinations;
@@ -9,33 +10,37 @@ export default function Destination() {
   const imageKey = currentDestination.images.webp.split('/').pop();
 
   return (
-    <div className="destination-page">
-      <h1>
-        <span>01</span> PICK YOUR DESTINATION
-      </h1>
+    <PageWrapper>
+      <div className="destination-page">
+        <h1>
+          <span>01</span> PICK YOUR DESTINATION
+        </h1>
 
-      <nav className="destination-tabs">
-        <ul>
-          {destinations.map((destination, index) => (
-            <li key={destination.name}>
-              <button
-                className={index === currentIndex ? 'destination-tabs__active' : ''}
-                onClick={() => setCurrentIndex(index)}
-              >
-                {destination.name.toUpperCase()}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </nav>
+        <nav className="destination-tabs">
+          <ul>
+            {destinations.map((destination, index) => (
+              <li key={destination.name}>
+                <button
+                  className={
+                    index === currentIndex ? 'destination-tabs__active' : ''
+                  }
+                  onClick={() => setCurrentIndex(index)}
+                >
+                  {destination.name.toUpperCase()}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-      <DestinationCard 
-        name={currentDestination.name}
-        description={currentDestination.description}
-        distance={currentDestination.distance}
-        travelTime={currentDestination.travel}
-        imageKey={imageKey}
-      />
-    </div>
+        <DestinationCard
+          name={currentDestination.name}
+          description={currentDestination.description}
+          distance={currentDestination.distance}
+          travelTime={currentDestination.travel}
+          imageKey={imageKey}
+        />
+      </div>
+    </PageWrapper>
   );
 }
