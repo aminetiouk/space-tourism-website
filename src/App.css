@@ -73,6 +73,8 @@ body {
   color: var(--white);
   background-color: var(--blue-900);
   height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
 /* Bellefair Text Presets */
@@ -160,11 +162,13 @@ body {
 
 .background {
   height: 100vh;
+  width: 100vw;
   background-size: cover;
   background-position: center;
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: -1;
+  overflow: hidden;
 }
 
 .background--home {
@@ -247,6 +251,7 @@ body {
   height: 48px;
   width: 48px;
   margin: 0 5rem;
+  z-index: 99;
 }
 
 .nav-line {
@@ -286,3 +291,20 @@ body {
   bottom: -30px;
 }
 
+.text-preset-8::before {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  left: 0;
+  bottom: -30px;
+  opacity: 0;
+  transform: scale(0, 1);
+  transition: all .3s ease-out;
+}
+
+.text-preset-8:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
