@@ -8,23 +8,23 @@ export default function Navbar({ page }) {
         <img src={logo} alt="logo" className="nav-logo" />
         <div className="nav-line"></div>
         <ul className="nav-links">
-          <li className={`text-preset-8 ${page === 'home' ? 'active' : ''}`}>
-            <Link to="/">
+          <li className="text-preset-8">
+            <Link to="/" className={page === 'home' ? 'active' : ''}>
               <span className="u-bold">00</span> Home
             </Link>
           </li>
-          <li className={`text-preset-8 ${page === 'destination' ? 'active' : ''}`}>
-            <Link to="/destination">
+          <li className="text-preset-8">
+            <Link to="/destination" className={page === 'destination' ? 'active' : ''}>
               <span className="u-bold">01</span> Destination
             </Link>
           </li>
-          <li className={`text-preset-8 ${page === 'crew' ? 'active' : ''}`}>
-            <Link to="/crew">
+          <li className="text-preset-8">
+            <Link to="/crew" className={page === 'crew' ? 'active' : ''}>
               <span className="u-bold">03</span> Crew
             </Link>
           </li>
-          <li className={`text-preset-8 ${page === 'technology' ? 'active' : ''}`}>
-            <Link to="/technology">
+          <li className="text-preset-8">
+            <Link to="/technology" className={page === 'technology' ? 'active' : ''}>
               <span className="u-bold">04</span> Technology
             </Link>
           </li>
