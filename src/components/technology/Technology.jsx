@@ -1,5 +1,9 @@
+import PageWrapper from '../PageWrapper';
+
 export default function Technology() {
   return (
-    <div>Technology</div>
-  )
+    <PageWrapper>
+      <div>Technology</div>
+    </PageWrapper>
+  );
 }
