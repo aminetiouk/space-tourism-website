@@ -1,29 +1,29 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/shared/logo.svg';
 
-export default function Navbar() {
+export default function Navbar({ page }) {
   return (
     <nav className="navbar">
       <div className="nav-content">
         <img src={logo} alt="logo" className="nav-logo" />
         <div className="nav-line"></div>
         <ul className="nav-links">
-          <li className="text-preset-8">
+          <li className={`text-preset-8 ${page === 'home' ? 'active' : ''}`}>
             <Link to="/">
               <span className="u-bold">00</span> Home
             </Link>
           </li>
-          <li className="text-preset-8">
+          <li className={`text-preset-8 ${page === 'destination' ? 'active' : ''}`}>
             <Link to="/destination">
               <span className="u-bold">01</span> Destination
             </Link>
           </li>
-          <li className="text-preset-8">
+          <li className={`text-preset-8 ${page === 'crew' ? 'active' : ''}`}>
             <Link to="/crew">
               <span className="u-bold">03</span> Crew
             </Link>
           </li>
-          <li className="text-preset-8">
+          <li className={`text-preset-8 ${page === 'technology' ? 'active' : ''}`}>
             <Link to="/technology">
               <span className="u-bold">04</span> Technology
             </Link>
