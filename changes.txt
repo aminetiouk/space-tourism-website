@@ -1,0 +1,391 @@
+diff --git a/package.json b/package.json
+index 9579053..b357631 100644
+--- a/package.json
++++ b/package.json
+@@ -17,14 +17,15 @@
+   },
+   "devDependencies": {
+     "@eslint/js": "^9.19.0",
+-    "@types/react": "^19.0.8",
+-    "@types/react-dom": "^19.0.3",
++    "@types/react": "^19.0.10",
++    "@types/react-dom": "^19.0.4",
+     "@vitejs/plugin-react": "^4.3.4",
+     "eslint": "^9.19.0",
+     "eslint-plugin-react": "^7.37.4",
+     "eslint-plugin-react-hooks": "^5.0.0",
+     "eslint-plugin-react-refresh": "^0.4.18",
+     "globals": "^15.14.0",
++    "typescript": "^5.8.3",
+     "vite": "^6.1.0"
+   }
+ }
+diff --git a/pnpm-lock.yaml b/pnpm-lock.yaml
+index 1a4c806..69e3140 100644
+--- a/pnpm-lock.yaml
++++ b/pnpm-lock.yaml
+@@ -25,10 +25,10 @@ importers:
+         specifier: ^9.19.0
+         version: 9.20.0
+       '@types/react':
+-        specifier: ^19.0.8
++        specifier: ^19.0.10
+         version: 19.0.10
+       '@types/react-dom':
+-        specifier: ^19.0.3
++        specifier: ^19.0.4
+         version: 19.0.4(@types/react@19.0.10)
+       '@vitejs/plugin-react':
+         specifier: ^4.3.4
+@@ -48,6 +48,9 @@ importers:
+       globals:
+         specifier: ^15.14.0
+         version: 15.15.0
++      typescript:
++        specifier: ^5.8.3
++        version: 5.8.3
+       vite:
+         specifier: ^6.1.0
+         version: 6.1.1
+@@ -1321,6 +1324,11 @@ packages:
+     resolution: {integrity: sha512-3KS2b+kL7fsuk/eJZ7EQdnEmQoaho/r6KUef7hxvltNA5DR8NAUM+8wJMbJyZ4G9/7i3v5zPBIMN5aybAh2/Jg==}
+     engines: {node: '>= 0.4'}
+ 
++  typescript@5.8.3:
++    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
++    engines: {node: '>=14.17'}
++    hasBin: true
++
+   unbox-primitive@1.1.0:
+     resolution: {integrity: sha512-nWJ91DjeOkej/TA8pXQ3myruKpKEYgqvpw9lz4OPHj/NWFNluYrjbz9j01CJ8yKQd2g4jFoOkINCTW2I5LEEyw==}
+     engines: {node: '>= 0.4'}
+@@ -2841,6 +2849,8 @@ snapshots:
+       possible-typed-array-names: 1.1.0
+       reflect.getprototypeof: 1.0.10
+ 
++  typescript@5.8.3: {}
++
+   unbox-primitive@1.1.0:
+     dependencies:
+       call-bound: 1.0.3
+diff --git a/src/App.jsx b/src/App.jsx
+deleted file mode 100644
+index 8e8574b..0000000
+--- a/src/App.jsx
++++ /dev/null
+@@ -1,34 +0,0 @@
+-import { Route, Routes, useLocation } from 'react-router-dom';
+-import Home from './components/Home';
+-import Crew from './components/crew/Crew';
+-import Technology from './components/technology/Technology';
+-import Destination from './components/destination/Destination';
+-import Background from './components/Background';
+-import Navbar from './components/Navbar';
+-import { AnimatePresence} from 'framer-motion';
+-import PageWrapper from './components/PageWrapper';
+-
+-function App() {
+-  const location = useLocation();
+-  const page = location.pathname.split('/')[1] || 'home';
+-
+-  return (
+-    <>
+-      <PageWrapper page={page}>
+-        <Background page={page} />
+-      </PageWrapper>
+-
+-      <Navbar page={page} />
+-      <AnimatePresence mode="wait">
+-        <Routes>
+-          <Route path="/" element={<Home />} />
+-          <Route path="/destination" element={<Destination />} />
+-          <Route path="/crew" element={<Crew />} />
+-          <Route path="/technology" element={<Technology />} />
+-        </Routes>
+-      </AnimatePresence>
+-    </>
+-  );
+-}
+-
+-export default App;
+diff --git a/src/components/Background.jsx b/src/components/Background.jsx
+deleted file mode 100644
+index 9dd398e..0000000
+--- a/src/components/Background.jsx
++++ /dev/null
+@@ -1,3 +0,0 @@
+-export default function Background({ children, page }) {
+-  return <div className={`background background--${page}`}>{children}</div>;
+-}
+diff --git a/src/components/Home.jsx b/src/components/Home.jsx
+deleted file mode 100644
+index 5626a30..0000000
+--- a/src/components/Home.jsx
++++ /dev/null
+@@ -1,28 +0,0 @@
+-import { Link } from 'react-router-dom';
+-import PageWrapper from './PageWrapper';
+-
+-export default function Home() {
+-  return (
+-    <PageWrapper>
+-      <div className="home">
+-        <div className="hero">
+-          <section className="hero-text">
+-            <p className="text-preset-5">SO, YOU WANT TO TRAVEL TO</p>
+-            <p className="text-preset-1">SPACE</p>
+-            <p className="text-preset-9">
+-              Let’s face it; if you want to go to space, you might as well
+-              genuinely go to outer space and not hover kind of on the edge of
+-              it. Well sit back, and relax because we’ll give you a truly out of
+-              this world experience!
+-            </p>
+-          </section>
+-          <div className="button">
+-            <Link to="/destination">
+-              <button className="hero-button text-preset-4">EXPLORE</button>
+-            </Link>
+-          </div>
+-        </div>
+-      </div>
+-    </PageWrapper>
+-  );
+-}
+diff --git a/src/components/NavBar.jsx b/src/components/NavBar.jsx
+deleted file mode 100644
+index b6c5c8a..0000000
+--- a/src/components/NavBar.jsx
++++ /dev/null
+@@ -1,35 +0,0 @@
+-import { Link } from 'react-router-dom';
+-import logo from '../assets/shared/logo.svg';
+-
+-export default function Navbar({ page }) {
+-  return (
+-    <nav className="navbar">
+-      <div className="nav-content">
+-        <img src={logo} alt="logo" className="nav-logo" />
+-        <div className="nav-line"></div>
+-        <ul className="nav-links">
+-          <li className="text-preset-8">
+-            <Link to="/" className={page === 'home' ? 'active' : ''}>
+-              <span className="u-bold">00</span> Home
+-            </Link>
+-          </li>
+-          <li className="text-preset-8">
+-            <Link to="/destination" className={page === 'destination' ? 'active' : ''}>
+-              <span className="u-bold">01</span> Destination
+-            </Link>
+-          </li>
+-          <li className="text-preset-8">
+-            <Link to="/crew" className={page === 'crew' ? 'active' : ''}>
+-              <span className="u-bold">03</span> Crew
+-            </Link>
+-          </li>
+-          <li className="text-preset-8">
+-            <Link to="/technology" className={page === 'technology' ? 'active' : ''}>
+-              <span className="u-bold">04</span> Technology
+-            </Link>
+-          </li>
+-        </ul>
+-      </div>
+-    </nav>
+-  );
+-}
+diff --git a/src/components/PageWrapper.jsx b/src/components/PageWrapper.jsx
+deleted file mode 100644
+index 9adcb42..0000000
+--- a/src/components/PageWrapper.jsx
++++ /dev/null
+@@ -1,24 +0,0 @@
+-import { motion } from 'framer-motion';
+-
+-const transition = { duration: 0.6, ease: 'easeInOut' };
+-
+-const variants = {
+-  initial: { opacity: 0.1 },
+-  animate: { opacity: 1 },
+-  exit: { opacity: 0.1 }
+-};
+-
+-export default function PageWrapper({ children , page}) {
+-  return (
+-    <motion.div
+-      key={page}
+-      variants={variants}
+-      initial="initial"
+-      animate="animate"
+-      exit="exit"
+-      transition={transition}
+-    >
+-      {children}
+-    </motion.div>
+-  );
+-}
+diff --git a/src/components/crew/Crew.jsx b/src/components/crew/Crew.jsx
+deleted file mode 100644
+index dbeac4e..0000000
+--- a/src/components/crew/Crew.jsx
++++ /dev/null
+@@ -1,9 +0,0 @@
+-import PageWrapper from '../PageWrapper';
+-
+-export default function Crew() {
+-  return (
+-    <PageWrapper>
+-      <div>Crew</div>
+-    </PageWrapper>
+-  );
+-}
+diff --git a/src/components/destination/Destination.jsx b/src/components/destination/Destination.jsx
+deleted file mode 100644
+index b94f712..0000000
+--- a/src/components/destination/Destination.jsx
++++ /dev/null
+@@ -1,89 +0,0 @@
+-import { useState } from 'react';
+-import data from '../../assets/data.json';
+-import PageWrapper from '../PageWrapper';
+-
+-const images = import.meta.glob('/src/assets/destination/*.{png,webp}', {
+-  eager: true,
+-  as: 'url',
+-});
+-
+-function DestinationCard({
+-  name,
+-  description,
+-  distance,
+-  travelTime,
+-  imageKey,
+-  destinations,
+-  currentIndex,
+-  setCurrentIndex
+-}) {
+-  const imgSrc = images[`/src/assets/destination/${imageKey}`];
+-
+-  return (
+-    <div className="destination">
+-      <img src={imgSrc} alt={name} className="destination-image" />
+-
+-      <div className="destination-info">
+-        <nav>
+-          <ul className="destination-tabs">
+-            {destinations.map((destination, index) => (
+-              <li key={destination.name}>
+-                <button
+-                  className={`destination-nav text-preset-8 ${
+-                    index === currentIndex ? 'destination-tabs__active' : ''
+-                  }`}
+-                  onClick={() => setCurrentIndex(index)}
+-                >
+-                  {destination.name.toUpperCase()}
+-                </button>
+-              </li>
+-            ))}
+-          </ul>
+-        </nav>
+-
+-        <h2 className="text-preset-2">{name}</h2>
+-        <p className="text-preset-9">{description}</p>
+-        <div className='destination-line'></div>
+-
+-        <div className="destination-meta">
+-          <div>
+-            <h3 className="text-preset-7">AVG. DISTANCE</h3>
+-            <p className="text-preset-6">{distance}</p>
+-          </div>
+-          <div>
+-            <h3 className="text-preset-7">Est. travel time</h3>
+-            <p className="text-preset-6">{travelTime}</p>
+-          </div>
+-        </div>
+-      </div>
+-    </div>
+-  );
+-}
+-
+-export default function Destination() {
+-  const destinations = data.destinations;
+-  const [currentIndex, setCurrentIndex] = useState(0);
+-  const currentDestination = destinations[currentIndex];
+-  const imageKey = currentDestination.images.webp.split('/').pop();
+-
+-  return (
+-    <PageWrapper>
+-      <div className="destination-page">
+-        <h1 className="text-preset-5">
+-          <span>01</span> PICK YOUR DESTINATION
+-        </h1>
+-
+-        <DestinationCard
+-          name={currentDestination.name.toUpperCase()}
+-          description={currentDestination.description}
+-          distance={currentDestination.distance}
+-          travelTime={currentDestination.travel}
+-          imageKey={imageKey}
+-          destinations={destinations}
+-          currentIndex={currentIndex}
+-          setCurrentIndex={setCurrentIndex}
+-        />
+-      </div>
+-    </PageWrapper>
+-  );
+-}
+diff --git a/src/components/technology/Technology.jsx b/src/components/technology/Technology.jsx
+deleted file mode 100644
+index db57275..0000000
+--- a/src/components/technology/Technology.jsx
++++ /dev/null
+@@ -1,9 +0,0 @@
+-import PageWrapper from '../PageWrapper';
+-
+-export default function Technology() {
+-  return (
+-    <PageWrapper>
+-      <div>Technology</div>
+-    </PageWrapper>
+-  );
+-}
+diff --git a/src/main.jsx b/src/main.jsx
+deleted file mode 100644
+index 1094c1e..0000000
+--- a/src/main.jsx
++++ /dev/null
+@@ -1,13 +0,0 @@
+-import { StrictMode } from 'react';
+-import { createRoot } from 'react-dom/client';
+-import App from './App.jsx';
+-import './App.css'
+-import { BrowserRouter } from 'react-router-dom';
+-
+-createRoot(document.getElementById('root')).render(
+-  <StrictMode>
+-    <BrowserRouter>
+-      <App />
+-    </BrowserRouter>
+-  </StrictMode>
+-);
+diff --git a/vite.config.js b/vite.config.js
+deleted file mode 100644
+index bede0e2..0000000
+--- a/vite.config.js
++++ /dev/null
+@@ -1,17 +0,0 @@
+-// vite.config.js
+-import { defineConfig } from 'vite';
+-import react from '@vitejs/plugin-react';
+-import path from 'path';
+-import { fileURLToPath } from 'url';
+-
+-const __filename = fileURLToPath(import.meta.url);
+-const __dirname = path.dirname(__filename);
+-
+-export default defineConfig({
+-  plugins: [react()],
+-  resolve: {
+-    alias: {
+-      src: path.resolve(__dirname, 'src'),
+-    },
+-  },
+-});
