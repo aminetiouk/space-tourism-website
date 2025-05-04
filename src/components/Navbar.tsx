@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
-import logo from '../assets/shared/logo.svg';
 
-export default function Navbar({ page }) {
+export default function Navbar({ page }: {page: string}) {
   return (
     <nav className="navbar">
       <div className="nav-content">
-        <img src={logo} alt="logo" className="nav-logo" />
+        <img src="/shared/logo.svg" alt="logo" className="nav-logo" />
         <div className="nav-line"></div>
         <ul className="nav-links">
           <li className="text-preset-8">
