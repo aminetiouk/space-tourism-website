@@ -2,11 +2,6 @@ import React, { useState } from 'react';
 import data from '../../lib/data.json';
 import PageWrapper from '../PageWrapper';
 
-const images = import.meta.glob('/src/assets/destination/*.{png,webp}', {
-  eager: true,
-  as: 'url'
-});
-
 type DestinationCardProps = {
   name: string;
   description: string;
@@ -34,7 +29,7 @@ function DestinationCard({
   currentIndex,
   setCurrentIndex
 }: DestinationCardProps) {
-  const imgSrc = images[`/src/assets/destination/${imageKey}`];
+  const imgSrc = `/assets/destination/${imageKey}`;
 
   return (
     <div className="destination">
@@ -82,7 +77,7 @@ export default function Destination() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentDestination = destinations[currentIndex];
   const imageKey = currentDestination.images.webp.split('/').pop() ?? '';
-
+  console.log(imageKey)
   return (
     <PageWrapper>
       <div className="destination-page">
