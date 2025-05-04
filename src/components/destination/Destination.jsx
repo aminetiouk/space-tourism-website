@@ -43,6 +43,7 @@ function DestinationCard({
 
         <h2 className="text-preset-2">{name}</h2>
         <p className="text-preset-9">{description}</p>
+        <div className='destination-line'></div>
 
         <div className="destination-meta">
           <div>
