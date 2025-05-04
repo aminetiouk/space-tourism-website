@@ -1,0 +1,264 @@
+diff --git a/src/assets/destination/image-europa.png b/src/assets/destination/image-europa.png
+deleted file mode 100644
+index e6addcf..0000000
+Binary files a/src/assets/destination/image-europa.png and /dev/null differ
+diff --git a/src/assets/destination/image-europa.webp b/src/assets/destination/image-europa.webp
+deleted file mode 100644
+index 532821f..0000000
+Binary files a/src/assets/destination/image-europa.webp and /dev/null differ
+diff --git a/src/assets/destination/image-mars.png b/src/assets/destination/image-mars.png
+deleted file mode 100644
+index d204043..0000000
+Binary files a/src/assets/destination/image-mars.png and /dev/null differ
+diff --git a/src/assets/destination/image-mars.webp b/src/assets/destination/image-mars.webp
+deleted file mode 100644
+index f81679b..0000000
+Binary files a/src/assets/destination/image-mars.webp and /dev/null differ
+diff --git a/src/assets/destination/image-moon.png b/src/assets/destination/image-moon.png
+deleted file mode 100644
+index 0bcaf85..0000000
+Binary files a/src/assets/destination/image-moon.png and /dev/null differ
+diff --git a/src/assets/destination/image-moon.webp b/src/assets/destination/image-moon.webp
+deleted file mode 100644
+index ed3ed05..0000000
+Binary files a/src/assets/destination/image-moon.webp and /dev/null differ
+diff --git a/src/assets/destination/image-titan.png b/src/assets/destination/image-titan.png
+deleted file mode 100644
+index 3a6cb88..0000000
+Binary files a/src/assets/destination/image-titan.png and /dev/null differ
+diff --git a/src/assets/destination/image-titan.webp b/src/assets/destination/image-titan.webp
+deleted file mode 100644
+index 7165bf8..0000000
+Binary files a/src/assets/destination/image-titan.webp and /dev/null differ
+diff --git a/src/assets/home/background-home-desktop.jpg b/src/assets/home/background-home-desktop.jpg
+deleted file mode 100644
+index 6d6bfe0..0000000
+Binary files a/src/assets/home/background-home-desktop.jpg and /dev/null differ
+diff --git a/src/assets/home/background-home-mobile.jpg b/src/assets/home/background-home-mobile.jpg
+deleted file mode 100644
+index f88a6af..0000000
+Binary files a/src/assets/home/background-home-mobile.jpg and /dev/null differ
+diff --git a/src/assets/home/background-home-tablet.jpg b/src/assets/home/background-home-tablet.jpg
+deleted file mode 100644
+index e4a2d9a..0000000
+Binary files a/src/assets/home/background-home-tablet.jpg and /dev/null differ
+diff --git a/src/assets/shared/icon-close.svg b/src/assets/shared/icon-close.svg
+deleted file mode 100644
+index ace11db..0000000
+--- a/src/assets/shared/icon-close.svg
++++ /dev/null
+@@ -1 +0,0 @@
+-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z"/><path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z"/></g></svg>
+\ No newline at end of file
+diff --git a/src/assets/shared/icon-hamburger.svg b/src/assets/shared/icon-hamburger.svg
+deleted file mode 100644
+index 7e5eab1..0000000
+--- a/src/assets/shared/icon-hamburger.svg
++++ /dev/null
+@@ -1 +0,0 @@
+-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/></g></svg>
+\ No newline at end of file
+diff --git a/src/assets/shared/logo.svg b/src/assets/shared/logo.svg
+deleted file mode 100644
+index 94fe604..0000000
+--- a/src/assets/shared/logo.svg
++++ /dev/null
+@@ -1 +0,0 @@
+-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg>
+\ No newline at end of file
+diff --git a/src/assets/technology/background-technology-desktop.jpg b/src/assets/technology/background-technology-desktop.jpg
+deleted file mode 100644
+index bd29068..0000000
+Binary files a/src/assets/technology/background-technology-desktop.jpg and /dev/null differ
+diff --git a/src/assets/technology/background-technology-mobile.jpg b/src/assets/technology/background-technology-mobile.jpg
+deleted file mode 100644
+index 3846bba..0000000
+Binary files a/src/assets/technology/background-technology-mobile.jpg and /dev/null differ
+diff --git a/src/assets/technology/background-technology-tablet.jpg b/src/assets/technology/background-technology-tablet.jpg
+deleted file mode 100644
+index 308e59d..0000000
+Binary files a/src/assets/technology/background-technology-tablet.jpg and /dev/null differ
+diff --git a/src/assets/technology/image-launch-vehicle-landscape.jpg b/src/assets/technology/image-launch-vehicle-landscape.jpg
+deleted file mode 100644
+index dce8f18..0000000
+Binary files a/src/assets/technology/image-launch-vehicle-landscape.jpg and /dev/null differ
+diff --git a/src/assets/technology/image-launch-vehicle-portrait.jpg b/src/assets/technology/image-launch-vehicle-portrait.jpg
+deleted file mode 100644
+index 0728b72..0000000
+Binary files a/src/assets/technology/image-launch-vehicle-portrait.jpg and /dev/null differ
+diff --git a/src/assets/technology/image-space-capsule-landscape.jpg b/src/assets/technology/image-space-capsule-landscape.jpg
+deleted file mode 100644
+index 7525b0e..0000000
+Binary files a/src/assets/technology/image-space-capsule-landscape.jpg and /dev/null differ
+diff --git a/src/assets/technology/image-space-capsule-portrait.jpg b/src/assets/technology/image-space-capsule-portrait.jpg
+deleted file mode 100644
+index 334d9b6..0000000
+Binary files a/src/assets/technology/image-space-capsule-portrait.jpg and /dev/null differ
+diff --git a/src/assets/technology/image-spaceport-landscape.jpg b/src/assets/technology/image-spaceport-landscape.jpg
+deleted file mode 100644
+index 6d7e4a3..0000000
+Binary files a/src/assets/technology/image-spaceport-landscape.jpg and /dev/null differ
+diff --git a/src/assets/technology/image-spaceport-portrait.jpg b/src/assets/technology/image-spaceport-portrait.jpg
+deleted file mode 100644
+index b882b27..0000000
+Binary files a/src/assets/technology/image-spaceport-portrait.jpg and /dev/null differ
+diff --git a/src/components/Background.tsx b/src/components/Background.tsx
+index 9dd398e..87a5c16 100644
+--- a/src/components/Background.tsx
++++ b/src/components/Background.tsx
+@@ -1,3 +1,8 @@
+-export default function Background({ children, page }) {
++type BackgroundProps = {
++  children?: React.ReactNode;
++  page: string;
++};
++
++export default function Background({ children, page }: BackgroundProps) {
+   return <div className={`background background--${page}`}>{children}</div>;
+ }
+diff --git a/src/components/Navbar.tsx b/src/components/Navbar.tsx
+index b6c5c8a..7f1f70b 100644
+--- a/src/components/Navbar.tsx
++++ b/src/components/Navbar.tsx
+@@ -1,11 +1,10 @@
+ import { Link } from 'react-router-dom';
+-import logo from '../assets/shared/logo.svg';
+ 
+-export default function Navbar({ page }) {
++export default function Navbar({ page }: {page: string}) {
+   return (
+     <nav className="navbar">
+       <div className="nav-content">
+-        <img src={logo} alt="logo" className="nav-logo" />
++        <img src="/shared/logo.svg" alt="logo" className="nav-logo" />
+         <div className="nav-line"></div>
+         <ul className="nav-links">
+           <li className="text-preset-8">
+diff --git a/src/components/PageWrapper.tsx b/src/components/PageWrapper.tsx
+index 9adcb42..7106ea6 100644
+--- a/src/components/PageWrapper.tsx
++++ b/src/components/PageWrapper.tsx
+@@ -1,4 +1,5 @@
+ import { motion } from 'framer-motion';
++import React from 'react';
+ 
+ const transition = { duration: 0.6, ease: 'easeInOut' };
+ 
+@@ -8,7 +9,12 @@ const variants = {
+   exit: { opacity: 0.1 }
+ };
+ 
+-export default function PageWrapper({ children , page}) {
++type PageWrapperProps = {
++  children: React.ReactNode;
++  page?: string;
++}
++
++export default function PageWrapper({ children , page}: PageWrapperProps) {
+   return (
+     <motion.div
+       key={page}
+diff --git a/src/components/destination/Destination.tsx b/src/components/destination/Destination.tsx
+index b94f712..1ad6e49 100644
+--- a/src/components/destination/Destination.tsx
++++ b/src/components/destination/Destination.tsx
+@@ -1,12 +1,29 @@
+-import { useState } from 'react';
+-import data from '../../assets/data.json';
++import React, { useState } from 'react';
++import data from '../../lib/data.json';
+ import PageWrapper from '../PageWrapper';
+ 
+ const images = import.meta.glob('/src/assets/destination/*.{png,webp}', {
+   eager: true,
+-  as: 'url',
++  as: 'url'
+ });
+ 
++type DestinationCardProps = {
++  name: string;
++  description: string;
++  distance: string;
++  travelTime: string;
++  imageKey: string;
++  destinations: {
++    name: string;
++    description: string;
++    distance: string;
++    travel: string;
++    images: { webp: string };
++  }[];
++  currentIndex: number;
++  setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
++};
++
+ function DestinationCard({
+   name,
+   description,
+@@ -16,7 +33,7 @@ function DestinationCard({
+   destinations,
+   currentIndex,
+   setCurrentIndex
+-}) {
++}: DestinationCardProps) {
+   const imgSrc = images[`/src/assets/destination/${imageKey}`];
+ 
+   return (
+@@ -43,7 +60,7 @@ function DestinationCard({
+ 
+         <h2 className="text-preset-2">{name}</h2>
+         <p className="text-preset-9">{description}</p>
+-        <div className='destination-line'></div>
++        <div className="destination-line"></div>
+ 
+         <div className="destination-meta">
+           <div>
+@@ -64,7 +81,7 @@ export default function Destination() {
+   const destinations = data.destinations;
+   const [currentIndex, setCurrentIndex] = useState(0);
+   const currentDestination = destinations[currentIndex];
+-  const imageKey = currentDestination.images.webp.split('/').pop();
++  const imageKey = currentDestination.images.webp.split('/').pop() ?? '';
+ 
+   return (
+     <PageWrapper>
+diff --git a/src/main.tsx b/src/main.tsx
+index 1094c1e..fa1c4cd 100644
+--- a/src/main.tsx
++++ b/src/main.tsx
+@@ -4,7 +4,11 @@ import App from './App.jsx';
+ import './App.css'
+ import { BrowserRouter } from 'react-router-dom';
+ 
+-createRoot(document.getElementById('root')).render(
++const container = document.getElementById('root')
++
++if (!container) throw new Error("Root container not found");
++
++createRoot(container).render(
+   <StrictMode>
+     <BrowserRouter>
+       <App />
+diff --git a/tsconfig.json b/tsconfig.json
+index cbf44e5..89750a3 100644
+--- a/tsconfig.json
++++ b/tsconfig.json
+@@ -16,6 +16,6 @@
+     "noEmit": true,
+     "jsx": "react-jsx"
+   },
+-  "include": ["src", "vite.config.ts", "types.d.ts"],
++  "include": ["src", "vite.config.ts", "src/lib/types.d.ts"],
+   "exclude": ["node_modules", "dist"]
+ }
+diff --git a/types.d.ts b/types.d.ts
+deleted file mode 100644
+index a95fc7b..0000000
+--- a/types.d.ts
++++ /dev/null
+@@ -1,4 +0,0 @@
+-declare module '*.json' {
+-  const value: any;
+-  export default value;
+-}
+\ No newline at end of file
