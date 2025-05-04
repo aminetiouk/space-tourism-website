@@ -213,6 +213,7 @@ body {
   width: 272px;
   border-radius: 50%;
   transition: all 1s ease-out;
+  cursor: pointer;
 }
 
 .button {
@@ -317,7 +318,19 @@ body {
   padding: 5rem 10rem;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
 
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.destination-image {
+  animation: rotate 60s linear infinite;
+}
 
 .destination-page h1 span {
   font-size: 28px;
@@ -336,6 +349,24 @@ body {
 .destination-nav {
   color: var(--blue-300);
   cursor: pointer;
+}
+
+.destination-nav::before{
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  left: 0;
+  bottom: -10px;
+  opacity: 0;
+  transform: scale(0, 1);
+  transition: all 0.3s ease-out;
+}
+
+.destination-nav:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
 }
 
 .destination-info nav ul li {
@@ -370,6 +401,7 @@ body {
   left: 0;
   bottom: -10px;
 }
+
 
 .destination-line {
   width: 100%;
