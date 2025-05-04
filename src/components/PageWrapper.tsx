@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import React from 'react';
 
 const transition = { duration: 0.6, ease: 'easeInOut' };
 
@@ -8,7 +9,12 @@ const variants = {
   exit: { opacity: 0.1 }
 };
 
-export default function PageWrapper({ children , page}) {
+type PageWrapperProps = {
+  children: React.ReactNode;
+  page?: string;
+}
+
+export default function PageWrapper({ children , page}: PageWrapperProps) {
   return (
     <motion.div
       key={page}
