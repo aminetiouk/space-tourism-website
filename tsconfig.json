@@ -16,6 +16,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "vite.config.ts", "types.d.ts"],
+  "include": ["src", "vite.config.ts", "src/lib/types.d.ts"],
   "exclude": ["node_modules", "dist"]
 }
