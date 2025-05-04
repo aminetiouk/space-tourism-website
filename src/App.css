@@ -190,12 +190,13 @@ body {
 .home {
   height: calc(100vh - 80px - 40px);
   display: flex;
-  padding: var(--space-1600) 11rem;
+  padding: 0 11rem;
 }
 
 .hero {
   display: grid;
-  margin-top: auto;
+  margin-top: 15rem;
+  height: 100%;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -213,9 +214,7 @@ body {
 
 .button {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: end;
+  margin: 6rem 0 0 15rem;
   z-index: 1;
 }
 
