@@ -1,11 +1,28 @@
-import { useState } from 'react';
-import data from '../../assets/data.json';
+import React, { useState } from 'react';
+import data from '../../lib/data.json';
 import PageWrapper from '../PageWrapper';
 
 const images = import.meta.glob('/src/assets/destination/*.{png,webp}', {
   eager: true,
-  as: 'url',
+  as: 'url'
 });
+
+type DestinationCardProps = {
+  name: string;
+  description: string;
+  distance: string;
+  travelTime: string;
+  imageKey: string;
+  destinations: {
+    name: string;
+    description: string;
+    distance: string;
+    travel: string;
+    images: { webp: string };
+  }[];
+  currentIndex: number;
+  setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
+};
 
 function DestinationCard({
   name,
@@ -16,7 +33,7 @@ function DestinationCard({
   destinations,
   currentIndex,
   setCurrentIndex
-}) {
+}: DestinationCardProps) {
   const imgSrc = images[`/src/assets/destination/${imageKey}`];
 
   return (
@@ -43,7 +60,7 @@ function DestinationCard({
 
         <h2 className="text-preset-2">{name}</h2>
         <p className="text-preset-9">{description}</p>
-        <div className='destination-line'></div>
+        <div className="destination-line"></div>
 
         <div className="destination-meta">
           <div>
@@ -64,7 +81,7 @@ export default function Destination() {
   const destinations = data.destinations;
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentDestination = destinations[currentIndex];
-  const imageKey = currentDestination.images.webp.split('/').pop();
+  const imageKey = currentDestination.images.webp.split('/').pop() ?? '';
 
   return (
     <PageWrapper>
