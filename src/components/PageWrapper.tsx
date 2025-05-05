@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 
-const transition = { duration: 1.2, ease: 'easeInOut' };
+const transition = { duration: 2, ease: 'easeInOut' };
 
 const variants = {
   initial: { opacity: 0.08 },
