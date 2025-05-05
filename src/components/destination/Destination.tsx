@@ -77,12 +77,12 @@ export default function Destination() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentDestination = destinations[currentIndex];
   const imageKey = currentDestination.images.webp.split('/').pop() ?? '';
-  console.log(imageKey)
+
   return (
     <PageWrapper>
       <div className="destination-page">
         <h1 className="text-preset-5">
-          <span>01</span> PICK YOUR DESTINATION
+          <span className='title-number'>01</span> PICK YOUR DESTINATION
         </h1>
 
         <DestinationCard
