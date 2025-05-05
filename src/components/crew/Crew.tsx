@@ -28,11 +28,13 @@ function CrewCard({
 }: TCrewCardProps) {
   const imgSrc = `/assets/crew/${imageKey}`;
   return (
-    <div className="crew-content">
-      <div className="crew-info">
-        <h3>{role}</h3>
-        <h2>{name}</h2>
-        <p>{bio}</p>
+    <div className="crew">
+      <div className="crew-content">
+        <div className="crew-info">
+          <h3 className="text-preset-4">{role}</h3>
+          <h2 className="text-preset-3">{name}</h2>
+          <p className="text-preset-9">{bio}</p>
+        </div>
 
         <nav>
           <ul className="crew-nav">
@@ -46,7 +48,9 @@ function CrewCard({
             ))}
           </ul>
         </nav>
-        <img src={imgSrc} alt="crew image" className='crew-image'/>
+      </div>
+      <div>
+        <img src={imgSrc} alt="crew image" className="crew-image" />
       </div>
     </div>
   );
@@ -62,7 +66,7 @@ export default function Crew() {
     <PageWrapper>
       <div className="crew-container">
         <h1 className="text-preset-5">
-          <span className='title-number'>02</span> MEET YOUR CREW
+          <span className="title-number">02</span> MEET YOUR CREW
         </h1>
         <CrewCard
           crews={crew}
