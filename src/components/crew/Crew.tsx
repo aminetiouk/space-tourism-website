@@ -1,6 +1,7 @@
-import PageWrapper from '../PageWrapper';
 import data from '../../lib/data.json';
 import { useState } from 'react';
+import PageWrapper from '../PageWrapper';
+import Title from '../Title';
 
 type TCrewCardProps = {
   role: string;
@@ -11,7 +12,6 @@ type TCrewCardProps = {
 
 function CrewCard({ role, name, bio, imageKey }: TCrewCardProps) {
   const imgSrc = `/assets/crew/${imageKey}`;
-  console.log(imageKey);
   return (
     <div className="crew">
       <div className="crew-info">
@@ -23,7 +23,9 @@ function CrewCard({ role, name, bio, imageKey }: TCrewCardProps) {
         <img
           src={imgSrc}
           alt="crew image"
-          className={`crew-image ${imageKey === 'image-mark-shuttleworth.webp' ? 'crew-image__edit' : ''}`}
+          className={`crew-image 
+            ${imageKey === 'image-mark-shuttleworth.webp' ? 'crew-image__edit' : ''} 
+            ${imageKey === 'image-douglas-hurley.webp' ? 'crew-image__edit1' : ''}`}
         />
       </div>
     </div>
@@ -38,9 +40,6 @@ export default function Crew() {
 
   return (
     <div className="crew-container">
-      <h1 className="text-preset-5">
-        <span className="title-number">02</span> MEET YOUR CREW
-      </h1>
       <nav>
         <ul className="crew-nav">
           {crews.map((crew, index) => (
@@ -53,6 +52,7 @@ export default function Crew() {
           ))}
         </ul>
       </nav>
+      <Title number="02" text="MEET YOUR CREW" />
       <PageWrapper page={`crew-${currentIndex}`}>
         <CrewCard
           role={currentCrew.role.toUpperCase()}
