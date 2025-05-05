@@ -325,7 +325,7 @@ body {
 
 /* Destination */
 .destination-page {
-  padding: 5rem 10rem;
+  padding: 2rem 10rem 5rem 10rem;
 }
 
 @keyframes rotate {
@@ -430,7 +430,7 @@ body {
 .crew {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 480px;
+  grid-template-rows: 450px;
   position: relative;
   height: 100%;
 
@@ -491,4 +491,9 @@ body {
   width: 350px;
   position: absolute;
   right: 100px;
+}
+.crew-image__edit1 {
+  position: absolute;
+  right: 10px;
+  top: -50px;
 }
