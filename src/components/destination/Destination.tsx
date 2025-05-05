@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import data from '../../lib/data.json';
+import SectionWrapper from '../SectionWrapper';
 import PageWrapper from '../PageWrapper';
+import Title from '../Title';
 
 type DestinationCardProps = {
   name: string;
@@ -79,12 +81,9 @@ export default function Destination() {
   const imageKey = currentDestination.images.webp.split('/').pop() ?? '';
 
   return (
-    <PageWrapper>
-      <div className="destination-page">
-        <h1 className="text-preset-5">
-          <span className='title-number'>01</span> PICK YOUR DESTINATION
-        </h1>
-
+    <div className="destination-page">
+      <Title number="01" text="PICK YOUR DESTINATION" />
+      <PageWrapper>
         <DestinationCard
           name={currentDestination.name.toUpperCase()}
           description={currentDestination.description}
@@ -95,7 +94,7 @@ export default function Destination() {
           currentIndex={currentIndex}
           setCurrentIndex={setCurrentIndex}
         />
-      </div>
-    </PageWrapper>
+      </PageWrapper>
+    </div>
   );
 }
