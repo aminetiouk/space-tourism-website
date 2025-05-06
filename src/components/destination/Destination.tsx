@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import data from '../../lib/data.json';
-import SectionWrapper from '../SectionWrapper';
-import PageWrapper from '../PageWrapper';
 import Title from '../Title';
+import PageWrapper from '../PageWrapper';
 
 type DestinationCardProps = {
   name: string;
@@ -54,21 +53,22 @@ function DestinationCard({
             ))}
           </ul>
         </nav>
+        <PageWrapper page={`destination-${currentIndex}`}>
+          <h2 className="text-preset-2">{name}</h2>
+          <p className="text-preset-9">{description}</p>
+          <div className="destination-line"></div>
 
-        <h2 className="text-preset-2">{name}</h2>
-        <p className="text-preset-9">{description}</p>
-        <div className="destination-line"></div>
-
-        <div className="destination-meta">
-          <div>
-            <h3 className="text-preset-7">AVG. DISTANCE</h3>
-            <p className="text-preset-6">{distance}</p>
+          <div className="destination-meta">
+            <div>
+              <h3 className="text-preset-7">AVG. DISTANCE</h3>
+              <p className="text-preset-6">{distance}</p>
+            </div>
+            <div>
+              <h3 className="text-preset-7">Est. travel time</h3>
+              <p className="text-preset-6">{travelTime}</p>
+            </div>
           </div>
-          <div>
-            <h3 className="text-preset-7">Est. travel time</h3>
-            <p className="text-preset-6">{travelTime}</p>
-          </div>
-        </div>
+        </PageWrapper>
       </div>
     </div>
   );
@@ -83,18 +83,17 @@ export default function Destination() {
   return (
     <div className="destination-page">
       <Title number="01" text="PICK YOUR DESTINATION" />
-      <PageWrapper>
-        <DestinationCard
-          name={currentDestination.name.toUpperCase()}
-          description={currentDestination.description}
-          distance={currentDestination.distance}
-          travelTime={currentDestination.travel}
-          imageKey={imageKey}
-          destinations={destinations}
-          currentIndex={currentIndex}
-          setCurrentIndex={setCurrentIndex}
-        />
-      </PageWrapper>
+
+      <DestinationCard
+        name={currentDestination.name.toUpperCase()}
+        description={currentDestination.description}
+        distance={currentDestination.distance}
+        travelTime={currentDestination.travel}
+        imageKey={imageKey}
+        destinations={destinations}
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
+      />
     </div>
   );
 }
