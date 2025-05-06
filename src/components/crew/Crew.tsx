@@ -1,7 +1,7 @@
 import data from '../../lib/data.json';
 import { useState } from 'react';
-import PageWrapper from '../PageWrapper';
 import Title from '../Title';
+import PageWrapper from '../PageWrapper';
 
 type TCrewCardProps = {
   role: string;
