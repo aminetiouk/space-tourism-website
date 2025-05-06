@@ -15,9 +15,9 @@ function TechnologyCard({ name, description, imageKey }: TechnologyCardProps) {
   return (
     <div className="technology-content">
       <section className="technology-info">
-        <h3>THE TERMINOLOGY…</h3>
-        <h2>{name}</h2>
-        <p>{description}</p>
+        <h3 className="text-preset-4">THE TERMINOLOGY…</h3>
+        <h2 className="text-preset-3">{name}</h2>
+        <p className="text-preset-9">{description}</p>
       </section>
       <section className="technology-image__container">
         <img
@@ -44,7 +44,7 @@ export default function Technology() {
           {technologies.map((technology, index) => (
             <li key={technology.name}>
               <button
-                className={`technology-button ${currentIndex === index ? 'technology-button__active' : ''}`}
+                className={`technology-button text-preset-4 ${currentIndex === index ? 'technology-button__active' : ''}`}
                 onClick={() => setCurrentIndex(index)}
               >
                 {index + 1}
@@ -54,7 +54,7 @@ export default function Technology() {
         </ul>
       </nav>
       <TechnologyCard
-        name={currentTechnology.name}
+        name={currentTechnology.name.toUpperCase()}
         description={currentTechnology.description}
         imageKey={imageKey}
       />
