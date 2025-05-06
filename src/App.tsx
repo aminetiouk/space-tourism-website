@@ -14,16 +14,18 @@ function App() {
   return (
     <>
       <Background page={page} />
-      <Navbar page={page} />
+      <div className="container">
+        <Navbar page={page} />
 
-      <AnimatePresence mode="wait">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/destination" element={<Destination />} />
-          <Route path="/crew" element={<Crew />} />
-          <Route path="/technology" element={<Technology />} />
-        </Routes>
-      </AnimatePresence>
+        <AnimatePresence mode="wait">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/destination" element={<Destination />} />
+            <Route path="/crew" element={<Crew />} />
+            <Route path="/technology" element={<Technology />} />
+          </Routes>
+        </AnimatePresence>
+      </div>
     </>
   );
 }
