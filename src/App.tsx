@@ -6,7 +6,6 @@ import Destination from './components/destination/Destination';
 import Background from './components/Background';
 import Navbar from './components/Navbar';
 import { AnimatePresence } from 'framer-motion';
-import PageWrapper from './components/PageWrapper';
 
 function App() {
   const location = useLocation();
@@ -14,10 +13,8 @@ function App() {
 
   return (
     <>
-        <PageWrapper page={page}>
-          <Background page={page} />
-        </PageWrapper>
-        <Navbar page={page} />
+      <Background page={page} />
+      <Navbar page={page} />
 
       <AnimatePresence mode="wait">
         <Routes>
