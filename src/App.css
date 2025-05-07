@@ -507,6 +507,7 @@ body {
 .technology-container {
   padding: 5rem 0rem 0rem 10rem;
   height: calc(100vh - 80px - 40px);
+  width: 100%;
   position: relative;
 }
 
@@ -515,17 +516,22 @@ body {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  top: 23rem;
 }
 
 .technology-content {
   display: flex;
+  align-items: center;
   height: 100%;
-  margin-top: 10rem;
-  column-gap: 3rem;
+  gap: 2rem;
 }
 
 .technology-info {
-  padding-left: 7rem;
+  padding-left: 144px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
 }
 .technology-info h3{
   opacity: .5;
