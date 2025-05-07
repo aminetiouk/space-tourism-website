@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 
-export default function Navbar({ page }: {page: string}) {
+export default function Navbar({ page }: { page: string }) {
   return (
     <nav className="navbar">
       <div className="nav-content">
-        <img src="/shared/logo.svg" alt="logo" className="nav-logo" />
+        <Link to="/">
+          <img src="/shared/logo.svg" alt="logo" className="nav-logo" />
+        </Link>
         <div className="nav-line"></div>
         <ul className="nav-links">
           <li className="text-preset-8">
@@ -13,7 +15,10 @@ export default function Navbar({ page }: {page: string}) {
             </Link>
           </li>
           <li className="text-preset-8">
-            <Link to="/destination" className={page === 'destination' ? 'active' : ''}>
+            <Link
+              to="/destination"
+              className={page === 'destination' ? 'active' : ''}
+            >
               <span className="u-bold">01</span> Destination
             </Link>
           </li>
@@ -23,7 +28,10 @@ export default function Navbar({ page }: {page: string}) {
             </Link>
           </li>
           <li className="text-preset-8">
-            <Link to="/technology" className={page === 'technology' ? 'active' : ''}>
+            <Link
+              to="/technology"
+              className={page === 'technology' ? 'active' : ''}
+            >
               <span className="u-bold">04</span> Technology
             </Link>
           </li>
