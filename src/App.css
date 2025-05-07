@@ -32,7 +32,7 @@ input {
 
 /* UTILITIES */
 .u-bold {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 /* BASE */
@@ -150,6 +150,7 @@ body {
   line-height: 1.2;
   letter-spacing: 2px;
   text-transform: uppercase;
+  font-weight: 300;
 }
 
 .text-preset-9 {
@@ -285,6 +286,7 @@ body {
 
 .nav-links {
   background-color: rgba(255, 255, 255, 0.1);
+  color: var(--blue-300);
   backdrop-filter: blur(10px);
   display: flex;
   height: 80px;
@@ -296,8 +298,15 @@ body {
   gap: 46px;
 }
 
+.nav-links li:hover:not(.active) {
+  color: var(--white);
+}
+
 .nav-links li {
   position: relative;
+}
+.active {
+  color: var(--white);
 }
 
 .active::after {
@@ -521,15 +530,15 @@ body {
 
 .technology-content {
   display: flex;
-  align-items: center;
-  height: 100%;
   gap: 2rem;
+  padding-top: 8.8rem;
 }
 
 .technology-info {
   padding-left: 144px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 24px;
 
 }
@@ -542,6 +551,13 @@ body {
   color: var(--white);
   border: solid 1px rgba(255, 255, 255, 0.25);
   border-radius: 50%;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.technology-button:hover:not(.technology-button__active) {
+  background-color: rgba(255, 255, 255, 0.09);
+  border: solid 1px rgba(255, 255, 255, 0.5);
 }
 
 .technology-button__active {
