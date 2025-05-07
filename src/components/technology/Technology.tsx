@@ -13,20 +13,22 @@ function TechnologyCard({ name, description, imageKey }: TechnologyCardProps) {
   const imageSrc = `/assets/technology/${imageKey}`;
 
   return (
-    <div className="technology-content">
-      <section className="technology-info">
-        <h3 className="text-preset-4">THE TERMINOLOGY…</h3>
-        <h2 className="text-preset-3">{name}</h2>
-        <p className="text-preset-9">{description}</p>
-      </section>
-      <section className="technology-image__container">
-        <img
-          src={imageSrc}
-          alt="technology image"
-          className="technology-image"
-        />
-      </section>
-    </div>
+    <PageWrapper key={`tech-${name}`}>
+      <div className="technology-content">
+        <section className="technology-info">
+          <h3 className="text-preset-4">THE TERMINOLOGY…</h3>
+          <h2 className="text-preset-3">{name}</h2>
+          <p className="text-preset-9">{description}</p>
+        </section>
+        <section className="technology-image__container">
+          <img
+            src={imageSrc}
+            alt="technology image"
+            className="technology-image"
+          />
+        </section>
+      </div>
+    </PageWrapper>
   );
 }
 
