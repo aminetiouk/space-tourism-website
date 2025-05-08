@@ -6,16 +6,18 @@ import PageWrapper from '../PageWrapper';
 export default function Crew() {
   const crews = data.crew;
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  if (!crews || crews.length === 0) return null;
+
   const currentCrew = crews[currentIndex];
-  const imageKey = currentCrew.images.webp.split('/').pop() ?? '';
-  const imgSrc = `/assets/crew/${imageKey}`;
+  const imgSrc = `/assets/crew/${currentCrew.images.webp.split('/').pop()}`;
 
   return (
     <div className="crew-container">
       <Title number="02" text="MEET YOUR CREW" />
       <div className="crew">
         <div className="crew-content">
-          <PageWrapper key={`crew-${currentIndex}`}>
+          <PageWrapper key={`crew-content-${currentIndex}`}>
             <div>
               <h3 className="text-preset-4">
                 {currentCrew.role.toUpperCase()}
@@ -28,7 +30,7 @@ export default function Crew() {
           </PageWrapper>
         </div>
         <div className="crew-image">
-          <PageWrapper key={`crew-${currentIndex}`}>
+          <PageWrapper key={`crew-image-${currentIndex}`}>
             <img src={imgSrc} alt="crew image" />
           </PageWrapper>
         </div>
@@ -39,6 +41,7 @@ export default function Crew() {
                 <button
                   className={`crew-pagination__button ${index === currentIndex ? 'crew-button__active' : ''}`}
                   onClick={() => setCurrentIndex(index)}
+                  aria-label={`View ${crew.name}`}
                 ></button>
               </li>
             ))}
