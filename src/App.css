@@ -649,9 +649,7 @@ body {
     margin: 24px 0;
   }
   .destination-meta {
-    display: flex;
     justify-content: center;
-    gap: 10rem;
   }
 }
 
@@ -689,5 +687,28 @@ body {
     margin: 0;
     left: 0;
     justify-self: center;
+  }
+
+  .destination-page{
+    gap: 0;
+    padding: 40px 60px;
+  }
+  .destination {
+    display: grid;
+    grid-template-rows: 0fr 0fr;
+    grid-template-columns: 1fr 1fr;
+    place-content: start;
+    gap: 0;
+    height: 100%;
+    padding: 80px 20px 0 20px;
+  }
+  .destination-info {
+    padding-right: 0;
+    align-items: start;
+    text-align: start;
+    width: auto;
+  }
+  .destination-meta {
+    justify-content: start;
   }
 }
