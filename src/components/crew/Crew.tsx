@@ -3,64 +3,48 @@ import { useState } from 'react';
 import Title from '../Title';
 import PageWrapper from '../PageWrapper';
 
-type TCrewCardProps = {
-  role: string;
-  name: string;
-  bio: string;
-  imageKey: string;
-};
-
-function CrewCard({ role, name, bio, imageKey }: TCrewCardProps) {
-  const imgSrc = `/assets/crew/${imageKey}`;
-  return (
-    <div className="crew">
-      <div className="crew-info">
-        <h3 className="text-preset-4">{role}</h3>
-        <h2 className="text-preset-3">{name}</h2>
-        <p className="text-preset-9">{bio}</p>
-      </div>
-      <div className="image-container">
-        <img
-          src={imgSrc}
-          alt="crew image"
-          className={`crew-image 
-            ${imageKey === 'image-mark-shuttleworth.webp' ? 'crew-image__edit' : ''} 
-            ${imageKey === 'image-douglas-hurley.webp' ? 'crew-image__edit1' : ''}`}
-        />
-      </div>
-    </div>
-  );
-}
-
 export default function Crew() {
   const crews = data.crew;
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentCrew = crews[currentIndex];
   const imageKey = currentCrew.images.webp.split('/').pop() ?? '';
+  const imgSrc = `/assets/crew/${imageKey}`;
 
   return (
     <div className="crew-container">
-      <nav>
-        <ul className="crew-nav">
-          {crews.map((crew, index) => (
-            <li key={crew.name}>
-              <button
-                className={`crew-button ${index === currentIndex ? 'crew-button__active' : ''}`}
-                onClick={() => setCurrentIndex(index)}
-              ></button>
-            </li>
-          ))}
-        </ul>
-      </nav>
       <Title number="02" text="MEET YOUR CREW" />
-      <PageWrapper page={`crew-${currentIndex}`}>
-        <CrewCard
-          role={currentCrew.role.toUpperCase()}
-          name={currentCrew.name.toUpperCase()}
-          bio={currentCrew.bio}
-          imageKey={imageKey}
-        />
-      </PageWrapper>
+      <div className="crew">
+        <div className="crew-content">
+          <PageWrapper key={`crew-${currentIndex}`}>
+            <div>
+              <h3 className="text-preset-4">
+                {currentCrew.role.toUpperCase()}
+              </h3>
+              <h2 className="text-preset-3">
+                {currentCrew.name.toUpperCase()}
+              </h2>
+              <p className="text-preset-9">{currentCrew.bio}</p>
+            </div>
+          </PageWrapper>
+        </div>
+        <div className="crew-image">
+          <PageWrapper key={`crew-${currentIndex}`}>
+            <img src={imgSrc} alt="crew image" />
+          </PageWrapper>
+        </div>
+        <div className="crew-pagination">
+          <ul className="crew-pagination__items">
+            {crews.map((crew, index) => (
+              <li key={crew.name}>
+                <button
+                  className={`crew-pagination__button ${index === currentIndex ? 'crew-button__active' : ''}`}
+                  onClick={() => setCurrentIndex(index)}
+                ></button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
