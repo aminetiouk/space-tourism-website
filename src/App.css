@@ -289,13 +289,13 @@ body {
   color: var(--blue-300);
   backdrop-filter: blur(10px);
   display: flex;
-  height: 80px;
-  width: 704px;
+  height: 96px;
+  padding: 0 64px;
   margin-left: auto;
-  padding-right: 5rem;
+  width: 710px;
   justify-content: end;
   align-items: center;
-  gap: 46px;
+  gap: 48px;
 }
 
 .nav-links li:hover:not(.active) {
@@ -304,6 +304,9 @@ body {
 
 .nav-links li {
   position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .active {
   color: var(--white);
@@ -316,7 +319,7 @@ body {
   width: 100%;
   background-color: white;
   left: 0;
-  bottom: -30px;
+  bottom: 0;
 }
 
 .nav-links li::before {
@@ -326,7 +329,7 @@ body {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.2);
   left: 0;
-  bottom: -30px;
+  bottom: 0;
   opacity: 0;
   transform: scale(0, 1);
   transition: all 0.3s ease-out;
@@ -588,7 +591,6 @@ body {
   }
   .nav-links {
     width: 800px;
-    padding: 48px 40px;
   }
 
   .nav-logo{
