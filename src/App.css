@@ -540,10 +540,9 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 24px;
-
 }
-.technology-info h3{
-  opacity: .5;
+.technology-info h3 {
+  opacity: 0.5;
 }
 .technology-button {
   width: 80px;
@@ -552,7 +551,7 @@ body {
   border: solid 1px rgba(255, 255, 255, 0.25);
   border-radius: 50%;
   cursor: pointer;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .technology-button:hover:not(.technology-button__active) {
@@ -565,6 +564,36 @@ body {
   color: var(--blue-900);
 }
 
-.technology-image__container{
+.technology-image__container {
   justify-self: right;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .container {
+    width: 768px;
+    height: 1024px;
+  }
+
+  .nav-line {
+    display: none;
+  }
+  .nav-links {
+    width: 800px;
+    padding: 40px;
+  }
+
+  .home{
+    margin: 0;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    margin: 128px 40px;
+  }
+  .hero-text{
+    text-align: center;
+    margin: 0 108px;
+  }
 }
