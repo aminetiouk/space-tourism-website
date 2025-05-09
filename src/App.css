@@ -641,6 +641,31 @@ body {
   }
 
   /* CREW */
+  .crew-component{
+    padding: 40px;
+    width: 100%;
+    height: calc(100% - 96px);
+  }
+  .crew__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+  .crew__content{
+    order: 1;
+    padding-top: 0;
+  }
+  .crew__navigation{
+    order: 2;
+  }
+  .crew__image-wrapper{
+    order: 3;
+  }
+  .crew__image{
+    height: 560px;
+  }
 }
 
 @media screen and (max-width: 1024px) and (max-height: 768px) {
