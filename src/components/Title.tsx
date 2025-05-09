@@ -6,7 +6,7 @@ type TitleProps = {
 export default function Title({ number, text }: TitleProps) {
   return (
     <h1 className="text-preset-5">
-      <span className="title-number">{number}</span>{` ${text}`}
+      <span className="page__number">{number}</span>{` ${text}`}
     </h1>
   );
 }
