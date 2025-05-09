@@ -30,6 +30,11 @@ input {
   font: inherit;
 }
 
+/* Utilities */
+.text-blue-300 {
+  color:  #d0d6f9;
+}
+
 /* BASE */
 
 :root {
@@ -37,6 +42,22 @@ input {
   --blue-900: #0b0d17;
   --blue-300: #d0d6f9;
   --white: #ffffff;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  color: var(--white);
+  background-color: var(--blue-900);
+  height: 100vh;
+  position: relative;
+}
+
+.container {
+  max-width: 1440px;
+  max-height: 1024px;
+  margin: 0 auto;
+  /* overflow: hidden; */
+  position: relative;
 }
 
 /* Keyframes */
@@ -48,25 +69,8 @@ input {
     transform: rotate(360deg);
   }
 }
-
-/* TYPOGRAPHY */
-body {
-  font-family: 'Barlow', sans-serif;
-  color: var(--white);
-  background-color: var(--blue-900);
-  height: 100vh;
-  position: relative;
-}
-
-.container {
-  width: 1440px;
-  height: 1024px;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-}
-
-.title-number {
+/* Page Title */
+.page__number {
   font-size: 28px;
   font-weight: 700;
   font-family: 'Barlow Condensed';
@@ -74,6 +78,8 @@ body {
   opacity: 0.25;
   letter-spacing: 4.72px;
 }
+
+/* Background */
 
 .background {
   background-size: cover;
@@ -83,7 +89,6 @@ body {
   z-index: -1;
   overflow: hidden;
 }
-
 .background--home {
   background-image: url('/assets/home/background-home-desktop.jpg');
 }
@@ -97,75 +102,21 @@ body {
   background-image: url('/assets/technology/background-technology-desktop.jpg');
 }
 
-/* Home */
-.home {
-  height: calc(100vh - 80px - 40px);
-  display: flex;
-  margin: 0 10rem;
-}
+/* NavBar */
 
-.hero {
-  display: grid;
-  margin-top: 25rem;
-  height: 100%;
-  grid-template-columns: 1fr 1fr;
-}
-
-.hero-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--blue-900);
-  background-color: var(--white);
-  height: 272px;
-  width: 272px;
-  border-radius: 50%;
-  transition: all 1s ease-out;
-  cursor: pointer;
-}
-
-.button {
-  position: relative;
-  margin: 6rem 0 0 15rem;
-  z-index: 1;
-}
-
-.hero-button::before {
-  content: '';
-  height: 420px;
-  width: 420px;
-  background-color: rgba(255, 255, 255);
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0;
-  z-index: -1;
-  transition: all 0.4s ease-out;
-}
-.hero-button:hover::before {
-  opacity: 0.1;
-}
-.hero-button:hover {
-  color: grey;
-  transform: scale(1.03);
-}
-
-/* Header */
 .navbar {
   padding-top: 40px;
 }
-
 .nav-content {
   display: flex;
   align-items: center;
 }
-
 .nav-logo {
   height: 48px;
   width: 48px;
   margin: 0 5rem;
   z-index: 99;
 }
-
 .nav-line {
   height: 1px;
   width: 600px;
@@ -174,7 +125,6 @@ body {
   position: absolute;
   left: 10rem;
 }
-
 .nav-links {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--blue-300);
@@ -188,11 +138,9 @@ body {
   align-items: center;
   gap: 48px;
 }
-
 .nav-links li:hover:not(.active) {
   color: var(--white);
 }
-
 .nav-links li {
   position: relative;
   height: 100%;
@@ -202,7 +150,6 @@ body {
 .active {
   color: var(--white);
 }
-
 .active::after {
   content: '';
   position: absolute;
@@ -212,7 +159,6 @@ body {
   left: 0;
   bottom: 0;
 }
-
 .nav-links li::before {
   content: '';
   position: absolute;
@@ -225,13 +171,69 @@ body {
   transform: scale(0, 1);
   transition: all 0.3s ease-out;
 }
-
 .text-preset-8:hover::before {
   opacity: 1;
   transform: scale(1, 1);
 }
 
+/* Home */
+
+.home__container {
+  height: calc(100vh - 96px - 40px);
+  padding: 128px 0;
+  width: 1110px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-end;
+}
+
+.home__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.home__button-container {
+  position: relative;
+  z-index: 1;
+  place-self: end;
+}
+
+.home__button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-900);
+  background-color: var(--white);
+  height: 272px;
+  width: 272px;
+  border-radius: 50%;
+  transition: all 1s ease-out;
+  cursor: pointer;
+}
+
+.home__button::before {
+  content: '';
+  height: 420px;
+  width: 420px;
+  background-color: rgba(255, 255, 255);
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.4s ease-out;
+}
+.home__button:hover::before {
+  opacity: 0.1;
+}
+.home__button:hover {
+  color: grey;
+  transform: scale(1.03);
+}
+
 /* Destination */
+
 .destination-page {
   padding: 5rem 10rem 5rem 10rem;
   height: 100%;
@@ -448,4 +450,3 @@ body {
 .technology-image__container {
   justify-self: right;
 }
-
