@@ -1,8 +1,9 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
-import './text-preset.css';
-import './App.css';
+import './styles/App.css';
+import './styles/responsive.css';
+import './styles/text-preset.css';
 import { BrowserRouter } from 'react-router-dom';
 
 const container = document.getElementById('root');
