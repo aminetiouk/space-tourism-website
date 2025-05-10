@@ -149,8 +149,6 @@ body {
   letter-spacing: 2.3px;
   font-weight: 400;
   height: 100%;
-  display: flex;
-  align-items: center;
   color: var(--blue-300);
   position: relative;
   transition: color 0.3s ease-out;
@@ -170,6 +168,12 @@ body {
 }
 .navbar__menu-item:hover:after {
   transform: scale(1, 1);
+}
+.navbar__link{
+  height: 100%;
+  display: flex;
+  column-gap: 12px;
+  align-items: center;
 }
 .navbar__link--active {
   color: var(--white);
