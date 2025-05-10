@@ -6,7 +6,7 @@ export default function Home() {
     <div className="home__container">
       <section className="home__content">
           <motion.p
-            className="home__subtitle"
+            className="home__subtitle text-preset-5 text-blue-300 "
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0 }}
@@ -15,7 +15,7 @@ export default function Home() {
           </motion.p>
 
           <motion.p
-            className="home__title"
+            className="home__title text-preset-1"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
@@ -24,7 +24,7 @@ export default function Home() {
           </motion.p>
 
           <motion.p
-            className="home__description"
+            className="home__description text-preset-9 text-blue-300"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 2 }}
