@@ -54,33 +54,36 @@ export default function Destination() {
             aria-labelledby={`destination-tab-${currentIndex}`}
             className="destination__panel"
           >
-            <h1 className="destination__title text-preset-2">
-              {currentDestination.name}
-            </h1>
-            <p className="destination__description text-preset-9">
-              {currentDestination.description}
-            </p>
-            <hr className="destination__divider"></hr>
+            <section className="destination__intro">
+              <h2 className="destination__title text-preset-2">
+                {currentDestination.name}
+              </h2>
+              <p className="destination__description text-preset-9">
+                {currentDestination.description}
+              </p>
+            </section>
 
-            <div className="destination__metrics">
+            <div className="destination__divider"></div>
+
+            <dl className="destination__metrics">
               <div className="destination__metric">
-                <h2 className="destination__label text-preset-7">
+                <dt className="destination__label text-preset-7">
                   AVG. DISTANCE
-                </h2>
-                <p className="destination__value text-preset-6">
+                </dt>
+                <dd className="destination__value text-preset-6">
                   {currentDestination.distance}
-                </p>
+                </dd>
               </div>
 
               <div className="destination__metric">
-                <h2 className="destination__label text-preset-7">
+                <dt className="destination__label text-preset-7">
                   Est. travel time
-                </h2>
-                <p className="destination__value text-preset-6">
+                </dt>
+                <dd className="destination__value text-preset-6">
                   {currentDestination.travel}
-                </p>
+                </dd>
               </div>
-            </div>
+            </dl>
           </div>
         </article>
       </section>
