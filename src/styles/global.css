@@ -163,11 +163,11 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
   position: absolute;
   bottom: 0;
-  transform: scale(0, 1);
+  transform: scaleX(0);
   transition: all 0.3s ease-out;
 }
 .navbar__menu-item:hover:after {
-  transform: scale(1, 1);
+  transform: scaleX(1);
 }
 .navbar__link{
   height: 100%;
@@ -207,27 +207,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
-}
-
-.home__subtitle{
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 28px;
-  font-weight: 300;
-  font-style: normal;
-  letter-spacing: 4px;
-  color: var(--blue-300);
-}
-.home__title{
-  font-family: 'Bellefair', serif;
-  font-size: 144px;
-}
-.home__description{
-  font-family: 'Barlow', sans-serif;
-  font-size: 18px;
-  line-height: 1.8;
-  font-weight: 300;
-  font-style: normal;
-  color: var(--blue-300);
 }
 
 .home__cta {
