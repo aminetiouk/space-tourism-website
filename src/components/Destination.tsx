@@ -3,97 +3,87 @@ import data from '../lib/data.json';
 import Title from './Title';
 import PageWrapper from './PageWrapper';
 
-type DestinationCardProps = {
-  name: string;
-  description: string;
-  distance: string;
-  travelTime: string;
-  imageKey: string;
-  destinations: {
-    name: string;
-    description: string;
-    distance: string;
-    travel: string;
-    images: { webp: string };
-  }[];
-  currentIndex: number;
-  setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
-};
-
-function DestinationCard({
-  name,
-  description,
-  distance,
-  travelTime,
-  imageKey,
-  destinations,
-  currentIndex,
-  setCurrentIndex
-}: DestinationCardProps) {
-  const imgSrc = `/assets/destination/${imageKey}`;
-
-  return (
-    <div className="destination">
-      <img src={imgSrc} alt={name} className="destination-image" />
-
-      <div className="destination-info">
-        <nav>
-          <ul className="destination-tabs">
-            {destinations.map((destination, index) => (
-              <li key={destination.name}>
-                <button
-                  className={`destination-nav text-preset-8 ${
-                    index === currentIndex ? 'destination-tabs__active' : ''
-                  }`}
-                  onClick={() => setCurrentIndex(index)}
-                >
-                  {destination.name.toUpperCase()}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <PageWrapper page={`destination-${currentIndex}`}>
-          <h2 className="text-preset-2">{name}</h2>
-          <p className="text-preset-9">{description}</p>
-          <div className="destination-line"></div>
-
-          <div className="destination-meta">
-            <div>
-              <h3 className="text-preset-7">AVG. DISTANCE</h3>
-              <p className="text-preset-6">{distance}</p>
-            </div>
-            <div>
-              <h3 className="text-preset-7">Est. travel time</h3>
-              <p className="text-preset-6">{travelTime}</p>
-            </div>
-          </div>
-        </PageWrapper>
-      </div>
-    </div>
-  );
-}
-
 export default function Destination() {
   const destinations = data.destinations;
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentDestination = destinations[currentIndex];
-  const imageKey = currentDestination.images.webp.split('/').pop() ?? '';
+  const imageKey = currentDestination.images.webp.split('/').pop();
+  const imgSrc = `/assets/destination/${imageKey}`;
 
   return (
-    <div className="destination-page">
+    <main className="destination">
       <Title number="01" text="PICK YOUR DESTINATION" />
 
-      <DestinationCard
-        name={currentDestination.name.toUpperCase()}
-        description={currentDestination.description}
-        distance={currentDestination.distance}
-        travelTime={currentDestination.travel}
-        imageKey={imageKey}
-        destinations={destinations}
-        currentIndex={currentIndex}
-        setCurrentIndex={setCurrentIndex}
-      />
-    </div>
+      <section className="destination__content">
+        <figure className="destination__media">
+          <img
+            src={imgSrc}
+            alt={`View of ${currentDestination.name}`}
+            className="destination__image"
+            loading="lazy"
+          />
+        </figure>
+
+        <article className="destination__details">
+          <nav
+            className="destination__nav"
+            aria-label="Destination Navigation Tabs"
+          >
+            <ul className="destination__tab-list" role="tablist">
+              {destinations.map((destination, index) => (
+                <li key={destination.name} role="presentation">
+                  <button
+                    role="tab"
+                    aria-selected={index === currentIndex}
+                    aria-controls={`destination-panel-${index}`}
+                    id={`destination-tab-${index}`}
+                    className={`destination__tab ${
+                      index === currentIndex ? 'destination__tab--active' : ''
+                    } text-preset-8`}
+                    onClick={() => setCurrentIndex(index)}
+                  >
+                    {destination.name.toUpperCase()}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div
+            role="tabpanel"
+            id={`destination-panel-${currentIndex}`}
+            aria-labelledby={`destination-tab-${currentIndex}`}
+            className="destination__panel"
+          >
+            <h1 className="destination__title text-preset-2">
+              {currentDestination.name}
+            </h1>
+            <p className="destination__description text-preset-9">
+              {currentDestination.description}
+            </p>
+            <hr className="destination__divider"></hr>
+
+            <div className="destination__metrics">
+              <div className="destination__metric">
+                <h2 className="destination__label text-preset-7">
+                  AVG. DISTANCE
+                </h2>
+                <p className="destination__value text-preset-6">
+                  {currentDestination.distance}
+                </p>
+              </div>
+
+              <div className="destination__metric">
+                <h2 className="destination__label text-preset-7">
+                  Est. travel time
+                </h2>
+                <p className="destination__value text-preset-6">
+                  {currentDestination.travel}
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
   );
 }
