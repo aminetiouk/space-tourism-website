@@ -16,12 +16,14 @@ export default function Destination() {
 
       <section className="destination__content">
         <figure className="destination__media">
-          <img
-            src={imgSrc}
-            alt={`View of ${currentDestination.name}`}
-            className="destination__image"
-            loading="lazy"
-          />
+          <PageWrapper key={`destination-image-${currentIndex}`}>
+            <img
+              src={imgSrc}
+              alt={`View of ${currentDestination.name}`}
+              className="destination__image"
+              loading="lazy"
+            />
+          </PageWrapper>
         </figure>
 
         <article className="destination__details">
@@ -54,33 +56,43 @@ export default function Destination() {
             aria-labelledby={`destination-tab-${currentIndex}`}
             className="destination__panel"
           >
-            <section className="destination__intro">
-              <h2 className="destination__title text-preset-2">
-                {currentDestination.name}
-              </h2>
-              <p className="destination__description text-preset-9">
-                {currentDestination.description}
-              </p>
-            </section>
+            <PageWrapper key={`destination-intro-${currentIndex}`}>
+              <section className="destination__intro">
+                <h2 className="destination__title text-preset-2">
+                  {currentDestination.name}
+                </h2>
+                <p className="destination__description text-preset-9">
+                  {currentDestination.description}
+                </p>
+              </section>
+            </PageWrapper>
 
             <div className="destination__divider"></div>
 
             <dl className="destination__metrics">
               <div className="destination__metric">
                 <dt className="destination__label text-preset-7">
-                  AVG. DISTANCE
+                  <PageWrapper key={`destination-label-${currentIndex}`}>
+                    AVG. DISTANCE
+                  </PageWrapper>
                 </dt>
                 <dd className="destination__value text-preset-6">
-                  {currentDestination.distance}
+                  <PageWrapper key={`destination-value-${currentIndex}`}>
+                    {currentDestination.distance}
+                  </PageWrapper>
                 </dd>
               </div>
 
               <div className="destination__metric">
                 <dt className="destination__label text-preset-7">
-                  Est. travel time
+                  <PageWrapper key={`destination-label-${currentIndex}`}>
+                    Est. travel time
+                  </PageWrapper>
                 </dt>
                 <dd className="destination__value text-preset-6">
-                  {currentDestination.travel}
+                  <PageWrapper key={`destination-value-${currentIndex}`}>
+                    {currentDestination.travel}
+                  </PageWrapper>
                 </dd>
               </div>
             </dl>
