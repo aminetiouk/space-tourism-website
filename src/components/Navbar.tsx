@@ -6,9 +6,14 @@ interface NavbarProps {
 
 const NAV_LINKS = [
   { path: '/', label: 'Home', code: '00', key: 'home' },
-  { path: '/destination', label: 'Destination', code: '01', key: 'destination' },
+  {
+    path: '/destination',
+    label: 'Destination',
+    code: '01',
+    key: 'destination'
+  },
   { path: '/crew', label: 'Crew', code: '03', key: 'crew' },
-  { path: '/technology', label: 'Technology', code: '04', key: 'technology' },
+  { path: '/technology', label: 'Technology', code: '04', key: 'technology' }
 ];
 
 export default function Navbar({ page }: NavbarProps) {
@@ -23,7 +28,7 @@ export default function Navbar({ page }: NavbarProps) {
           />
         </Link>
 
-        <div className="navbar__divider" />
+        <div className="navbar__divider"></div>
 
         <ul className="navbar__menu">
           {NAV_LINKS.map(({ path, label, code, key }) => (
