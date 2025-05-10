@@ -13,12 +13,14 @@ export default function Crew() {
   const imageSrc = `/assets/crew/${currentCrew.images.webp.split('/').pop()}`;
 
   return (
-    <div className="crew-component">
+    <main className="crew">
+
       <Title number="02" text="MEET YOUR CREW" />
-      <div className="crew__container">
-        <div className="crew__content">
-          <PageWrapper key={`crew-content-${currentIndex}`}>
-            <div className="crew__info">
+
+      <div className="crew__layout">
+        <section className="crew__details">
+          <PageWrapper key={`crew-profile-${currentIndex}`}>
+            <article className="crew__profile" aria-labelledby='crew-name'>
               <h3 className="crew__role text-preset-4">
                 {currentCrew.role.toUpperCase()}
               </h3>
@@ -26,32 +28,38 @@ export default function Crew() {
                 {currentCrew.name.toUpperCase()}
               </h2>
               <p className="crew__bio text-preset-9">{currentCrew.bio}</p>
-            </div>
+            </article>
           </PageWrapper>
-        </div>
-        <div className="crew__image-wrapper">
-          <PageWrapper key={`crew-image-${currentIndex}`}>
+        </section>
+
+        <figure className="crew__photo">
+          <PageWrapper key={`crew-photo-${currentIndex}`}>
             <img
               src={imageSrc}
               alt={`${currentCrew.name}, ${currentCrew.role}`}
-              className="crew__image"
+              className="crew__photo-img"
             />
           </PageWrapper>
-        </div>
-        <div className="crew__navigation">
-          <ul className="crew__pagination">
+        </figure>
+
+        <nav className="crew__navigation" aria-label='Crew Member Selector'>
+          <ul className="crew__nav-list">
             {crews.map((crew, index) => (
-              <li key={crew.name}>
+              <li key={crew.name} className='crew__nav-item'>
                 <button
-                  className={`crew__pagination-button ${index === currentIndex ? 'crew__pagination-button--active' : ''}`}
                   onClick={() => setCurrentIndex(index)}
-                  aria-label={`View ${crew.name}`}
+                  className={`crew__nav-button ${
+                    index === currentIndex
+                    ? 'crew__nav-button--active'
+                    : ''
+                  }`}
+                  aria-label={`View crew member ${crew.name}`}
                 ></button>
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
       </div>
-    </div>
+    </main>
   );
 }
