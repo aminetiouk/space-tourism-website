@@ -205,7 +205,28 @@ body {
   gap: 24px;
 }
 
-.home__button-container {
+.home__subtitle{
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 4px;
+  color: var(--blue-300);
+}
+.home__title{
+  font-family: 'Bellefair', serif;
+  font-size: 144px;
+}
+.home__description{
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 300;
+  font-style: normal;
+  color: var(--blue-300);
+}
+
+.home__cta {
   position: relative;
   z-index: 1;
   place-self: end;
