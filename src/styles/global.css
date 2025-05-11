@@ -53,14 +53,13 @@ body {
   color: var(--white);
   background-color: var(--blue-900);
   height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
   position: relative;
 }
 
 .container {
-  max-width: 1440px;
-  max-height: 1024px;
-  margin: 0 auto;
-  /* overflow: hidden; */
+  width: 100%;
   position: relative;
 }
 
