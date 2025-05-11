@@ -47,8 +47,9 @@ export default function Technology() {
             role="tabpanel"
             aria-labelledby={`technology-tab-${currentIndex}`}
           >
+            <PageWrapper key={`technology-image-${currentIndex}`}>
             <article className="technology__info">
-              <section>
+              <section className="technology__intro">
                 <h3 className="technology__subheading text-preset-4">
                   THE TERMINOLOGY…
                 </h3>
@@ -60,15 +61,18 @@ export default function Technology() {
                 {current.description}
               </p>
             </article>
+            </PageWrapper>
           </section>
         </div>
-        <figure className="technology__media">
-          <img
-            src={imageSrc}
-            alt={`${current.name} illustration`}
-            className="technology__image"
-          />
-        </figure>
+        <PageWrapper key={`technology-image-${currentIndex}`}>
+          <figure className="technology__media">
+            <img
+              src={imageSrc}
+              alt={`${current.name} illustration`}
+              className="technology__image"
+            />
+          </figure>
+        </PageWrapper>
       </div>
     </main>
   );
