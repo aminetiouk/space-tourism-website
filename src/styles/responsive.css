@@ -9,6 +9,9 @@
   }
 }
 @media (max-width: 1170px) {
+  .container {
+    position: relative;
+  }
   .background--home {
     background-image: url('/assets/home/background-home-tablet.jpg');
   }
@@ -119,6 +122,38 @@
   }
   .crew__nav-item {
     width: 55px;
+  }
+  .technology {
+    padding: 40px 0;
+    height: calc(100vh - 96px);
+    margin-left: 0;
+  }
+  .page__title{
+    padding-left: 40px;
+  }
+  .technology__layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    column-gap: 0px;
+    padding-top: 64px;
+    gap: 32px;
+  }
+  .technology__wrapper {
+    order: 1;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .technology__tab-list {
+    flex-direction: row;
+  }
+  .technology__tab-button{
+    width: 56px;
+    height: 56px;
+  }
+  .technology__info{
+    max-width: 512px;
+    text-align: center;
   }
 }
 
