@@ -15,6 +15,12 @@
   .background--destination {
     background-image: url('/assets/destination/background-destination-tablet.jpg');
   }
+  .background--crew {
+    background-image: url('/assets/crew/background-crew-tablet.jpg');
+  }
+  .background--technology {
+    background-image: url('/assets/technology/background-technology-tablet.jpg');
+  }
   .navbar {
     padding-top: 0;
     width: 100%;
@@ -27,7 +33,6 @@
     padding: 0 40px;
     justify-content: end;
     width: 100%;
-    margin-left: 0;
   }
   .home__container {
     display: flex;
@@ -48,36 +53,75 @@
     place-self: center;
   }
 
-  .destination{
+  .destination {
     height: calc(100vh - 96px);
     padding: 40px;
     width: 100%;
   }
-  .destination__content{
+  .destination__content {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     height: 100%;
     row-gap: 32px;
     column-gap: 0;
   }
-  .destination__image{
+  .destination__image {
     width: 300px;
   }
-  .destination__details{
+  .destination__details {
     align-items: center;
     gap: 24px;
     max-width: 512px;
   }
-  .destination__intro{
+  .destination__intro {
     text-align: center;
   }
-  .destination__panel{
+  .destination__panel {
     gap: 24px;
   }
-  .destination__metric{
+  .destination__metric {
     align-items: center;
   }
+
+  .crew {
+    width: 100%;
+    height: calc(100vh - 96px);
+    padding: 40px 40px 0 40px;
+  }
+  .crew__layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .crew__details {
+    order: 1;
+    padding: 0;
+  }
+  .crew__profile {
+    text-align: center;
+    padding-top: 40px;
+    max-width: 512px;
+    gap: 16px;
+  }
+  .crew__photo {
+    display: flex;
+    justify-content: center;
+    order: 3;
+    padding-top: 16px;
+    width: 100%;
+  }
+  .crew__photo-img {
+    max-height: 480px;
+  }
+  .crew__navigation {
+    order: 2;
+  }
+  .crew__nav-item {
+    width: 55px;
+  }
 }
+
 @media (max-width: 1130px) {
   .navbar__divider {
     width: 240px;
@@ -88,7 +132,7 @@
     display: none;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .background--home {
     background-image: url('/assets/home/background-home-tablet.jpg');
   }
@@ -103,7 +147,6 @@
   .navbar__menu {
     margin-left: 0;
     padding: 0 40px;
-    gap: 40px;
     width: 100%;
     justify-content: end;
   }
@@ -115,34 +158,33 @@
     padding: 128px 40px;
     justify-content: space-between;
   }
-  .destination{
+  .destination {
     height: calc(100vh - 96px);
     padding: 40px;
     width: 100%;
   }
-  .destination__content{
+  .destination__content {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     height: 100%;
     row-gap: 32px;
     column-gap: 0;
   }
-  .destination__image{
+  .destination__image {
     width: 300px;
   }
-  .destination__details{
+  .destination__details {
     align-items: center;
     gap: 24px;
     max-width: 512px;
   }
-  .destination__intro{
+  .destination__intro {
     text-align: center;
   }
-  .destination__panel{
+  .destination__panel {
     gap: 24px;
   }
-  .destination__metric{
+  .destination__metric {
     align-items: center;
   }
-  
 }
