@@ -372,6 +372,7 @@ body {
 }
 .crew__bio {
   font-size: 18px;
+  color: var(--blue-300);
 }
 .crew__photo {
   grid-column: 2/3;
