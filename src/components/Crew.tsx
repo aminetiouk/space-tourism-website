@@ -14,13 +14,12 @@ export default function Crew() {
 
   return (
     <main className="crew">
-
       <Title number="02" text="MEET YOUR CREW" />
 
       <div className="crew__layout">
         <section className="crew__details">
           <PageWrapper key={`crew-profile-${currentIndex}`}>
-            <article className="crew__profile" aria-labelledby='crew-name'>
+            <article className="crew__profile" aria-labelledby="crew-name">
               <h3 className="crew__role text-preset-4">
                 {currentCrew.role.toUpperCase()}
               </h3>
@@ -42,19 +41,19 @@ export default function Crew() {
           </PageWrapper>
         </figure>
 
-        <nav className="crew__navigation" aria-label='Crew Member Selector'>
+        <nav className="crew__navigation" aria-label="Crew Member Selector">
           <ul className="crew__nav-list">
             {crews.map((crew, index) => (
-              <li key={crew.name} className='crew__nav-item'>
+              <li key={crew.name} className="crew__nav-item">
                 <button
                   onClick={() => setCurrentIndex(index)}
                   className={`crew__nav-button ${
-                    index === currentIndex
-                    ? 'crew__nav-button--active'
-                    : ''
+                    index === currentIndex ? 'crew__nav-button--active' : ''
                   }`}
                   aria-label={`View crew member ${crew.name}`}
-                ></button>
+                >
+                  <span className="crew__nav-ring"></span>
+                </button>
               </li>
             ))}
           </ul>
