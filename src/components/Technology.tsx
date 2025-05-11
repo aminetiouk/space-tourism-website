@@ -48,30 +48,34 @@ export default function Technology() {
             aria-labelledby={`technology-tab-${currentIndex}`}
           >
             <PageWrapper key={`technology-image-${currentIndex}`}>
-            <article className="technology__info">
-              <section className="technology__intro">
-                <h3 className="technology__subheading text-preset-4">
-                  THE TERMINOLOGY…
-                </h3>
-                <h2 className="technology__heading text-preset-3">
-                  {current.name.toUpperCase()}
-                </h2>
-              </section>
-              <p className="technology__description text-preset-9">
-                {current.description}
-              </p>
-            </article>
+              <article className="technology__info">
+                <section className="technology__intro">
+                  <h3 className="technology__subheading text-preset-4">
+                    THE TERMINOLOGY…
+                  </h3>
+                  <h2 className="technology__heading text-preset-3">
+                    {current.name.toUpperCase()}
+                  </h2>
+                </section>
+                <p className="technology__description text-preset-9">
+                  {current.description}
+                </p>
+              </article>
             </PageWrapper>
           </section>
         </div>
         <PageWrapper key={`technology-image-${currentIndex}`}>
-          <figure className="technology__media">
+          <picture className="technology__media">
+            <source
+              media="(max-width: 1170px)"
+              srcSet={`/assets/technology/${current.images.landscape.split('/').pop()}`}
+            />
             <img
-              src={imageSrc}
+              src={`/assets/technology/${current.images.portrait.split('/').pop()}`}
               alt={`${current.name} illustration`}
               className="technology__image"
             />
-          </figure>
+          </picture>
         </PageWrapper>
       </div>
     </main>
