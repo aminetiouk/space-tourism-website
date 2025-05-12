@@ -13,7 +13,7 @@ export default function Technology() {
 
   return (
     <main className="technology">
-      <Title text="SPACE LAUNCH 101" number="03" />
+      <Title text="SPACE LAUNCH 101" number="03" className="technology__title" />
 
       <div className="technology__layout">
         <div className="technology__wrapper">
