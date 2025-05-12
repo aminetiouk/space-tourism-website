@@ -63,16 +63,6 @@ body {
   position: relative;
 }
 
-/* Page Title */
-.page__number {
-  font-size: 28px;
-  font-weight: 700;
-  font-family: 'Barlow Condensed';
-  color: var(--white);
-  opacity: 0.25;
-  letter-spacing: 4.72px;
-}
-
 /* Background */
 
 .background {
@@ -466,6 +456,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+.technology__title{
+  padding-left: 0px;
 }
 .technology__layout {
   display: grid;
