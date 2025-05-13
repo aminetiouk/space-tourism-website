@@ -342,7 +342,7 @@ body {
 }
 .crew__layout {
   display: grid;
-  grid-template-columns: 539px 639px;
+  grid-template-columns: 539px 1fr;
   grid-template-rows: 631px 103px;
   column-gap: 32px;
   height: 100%;
