@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 interface NavbarProps {
@@ -17,6 +18,8 @@ const NAV_LINKS = [
 ];
 
 export default function Navbar({ page }: NavbarProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="navbar__container">
@@ -29,13 +32,25 @@ export default function Navbar({ page }: NavbarProps) {
         </Link>
 
         <div className="navbar__divider"></div>
+        {/* Hamburger Button */}
+        <button
+          className="navbar__hamburger"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          <img
+            src={`${isOpen ? '/shared/icon-close.svg' : '/shared/icon-hamburger.svg'}`}
+            alt="hamburger icon"
+          />
+        </button>
 
-        <ul className="navbar__menu">
+        <ul className={`navbar__menu ${isOpen ? 'navbar__menu--open' : ''}`}>
           {NAV_LINKS.map(({ path, label, code, key }) => (
             <li key={key} className="navbar__menu-item">
               <Link
                 to={path}
                 className={`navbar__link ${page === key ? 'navbar__link--active' : ''}`}
+                onClick={() => setIsOpen(false)}
               >
                 <span className="navbar__link-code">{code}</span> {label}
               </Link>
@@ -44,5 +59,32 @@ export default function Navbar({ page }: NavbarProps) {
         </ul>
       </div>
     </nav>
+    // {/* <nav className="navbar_mobile">
+    //   <div className="navbar__mobile-container">
+    //     <Link to="/" aria-label="Home" className="navbar__m-logo-link">
+    //       <img
+    //         src="/shared/logo.svg"
+    //         alt="Space Tourism Logo"
+    //         className="navbar__m-logo"
+    //       />
+    //     </Link>
+
+    //     <button>
+
+    //     </button>
+    //     <ul className="navbar__mobile-menu">
+    //       {NAV_LINKS.map(({ path, label, code, key }) => (
+    //         <li key={key} className="navbar__mobile-menu-item">
+    //           <Link
+    //             to={path}
+    //             className={`navbar__mobile-link ${page === key ? 'navbar__mobile-link--active' : ''}`}
+    //           >
+    //             <span className="navbar__mobile-link-code">{code}</span> {label}
+    //           </Link>
+    //         </li>
+    //       ))}
+    //     </ul>
+    //   </div>
+    // </nav> */}
   );
 }
