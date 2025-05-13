@@ -1,7 +1,7 @@
 type TitleProps = {
   number: string;
   text: string;
-  className: string
+  className?: string
 }
 
 export default function Title({ number, text, className}: TitleProps) {
