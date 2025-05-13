@@ -70,7 +70,7 @@ body {
   background-position: center;
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: -10;
   overflow: hidden;
 }
 .background--home {
@@ -97,7 +97,7 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 2rem;
+  width: 24px;
   z-index: 99999;
 }
 .navbar__container {
@@ -132,10 +132,6 @@ body {
 }
 .navbar__menu-item {
   text-transform: uppercase;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 16px;
-  letter-spacing: 2.3px;
-  font-weight: 400;
   height: 100%;
   color: var(--blue-300);
   position: relative;
