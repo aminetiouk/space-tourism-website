@@ -7,6 +7,11 @@ html {
   scrollbar-width: none; /* Firefox */
 }
 
+:root {
+  --sh_navbar: 70px;
+  --mh_navbar: 96px;
+}
+
 @media (max-width: 1390px) {
   .navbar__divider {
     width: 450px;
@@ -50,7 +55,7 @@ html {
   }
 
   .navbar {
-    height: 96px;
+    height: var(--mh_navbar);
     padding-top: 0px;
   }
 
@@ -58,7 +63,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: calc(100vh - 96px);
+    height: calc(100vh - var(--mh_navbar));
     width: 100vw;
     padding: 128px 40px;
     justify-content: space-between;
@@ -77,7 +82,7 @@ html {
   }
 
   .destination {
-    height: calc(100vh - 96px);
+    height: calc(100vh - var(--mh_navbar));
     padding: 40px;
     width: 100%;
   }
@@ -108,7 +113,7 @@ html {
 
   .crew {
     width: 100%;
-    height: calc(100vh - 96px);
+    height: calc(100vh - var(--mh_navbar));
     padding: 40px 40px 0 40px;
   }
   .crew__layout {
@@ -163,13 +168,10 @@ html {
     width: 60px;
     height: 60px;
   }
-  .crew__bio {
-    text-align: justify;
-  }
 
   .technology {
     padding: 40px 0;
-    height: calc(100vh - 96px);
+    height: calc(100vh - var(--mh_navbar));
     margin-left: 0;
   }
   .technology__title {
@@ -223,16 +225,27 @@ html {
     display: none;
   }
   .navbar__mobile-container {
-    height: 88px;
+    height: var(--sh_navbar);
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: space-between;
-    padding: 0 24px;
+    padding: 0 40px;
   }
   .navbar__hamburger {
-    display: block;
+    display: flex;
     position: fixed;
-    right: 24px;
+    align-items: center;
+    justify-content: center;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+  }
+  .navbar__mobile-logo-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .navbar__mobile-logo {
     width: 40px;
@@ -328,7 +341,7 @@ html {
   }
 
   .home__container {
-    height: calc(100vh - 88px);
+    height: calc(100vh - var(--sh_navbar));
     padding: 24px;
     justify-content: center;
     overflow: hidden;
@@ -349,12 +362,12 @@ html {
     flex: 1;
   }
   .home__button {
-    height: 144px;
-    width: 144px;
+    height: 230px;
+    width: 230px;
   }
 
   .destination {
-    height: calc(100vh - 88px);
+    height: calc(100vh - var(--sh_navbar));
     padding: 24px;
     width: 100%;
   }
@@ -393,9 +406,10 @@ html {
   }
 
   .crew {
-    height: calc(100vh - 88px);
+    height: calc(100vh - var(--sh_navbar));
     padding: 24px;
     gap: 0;
+    overflow: hidden;
   }
 
   .crew__layout {
@@ -411,22 +425,28 @@ html {
   .crew__details {
     order: 1;
   }
+  .crew__profile{
+    gap: 10px;
+  }
   .crew__photo {
     order: 3;
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     align-items: center;
     text-align: center;
   }
   .crew__photo-img {
     width: 80%;
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   }
+
   .crew__navigation {
     order: 2;
   }
   .crew__nav-ring {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
   }
   .crew__nav-item {
     justify-content: center;
@@ -436,12 +456,12 @@ html {
     width: 15px;
     height: 15px;
   }
-  .crew__nav-button::before {
-    width: 45px;
-    height: 45px;
+  .crew__nav-button::before,.crew__nav-button::after {
+    display: none;
   }
+
   .technology {
-    height: calc(100vh - 88px);
+    height: calc(100vh - var(--sh_navbar));
     padding: 24px 0;
     width: 100%;
   }
@@ -479,23 +499,12 @@ html {
     width: 30px;
     height: 30px;
   }
+  .home__button {
+    height: 144px;
+    width: 144px;
+  }
   .technology__wrapper {
     gap: 20px;
-  }
-  .navbar__mobile-container {
-    height: 60px;
-  }
-  .home__container {
-    height: calc(100vh - 60px);
-  }
-  .destination {
-    height: calc(100vh - 60px);
-  }
-  .crew {
-    height: calc(100vh - 60px);
-  }
-  .technology {
-    height: calc(100vh - 60px);
   }
 }
 
