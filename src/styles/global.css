@@ -59,7 +59,7 @@ body {
 }
 
 .container {
-  width: 100%;
+  /* width: 100%; */
   position: relative;
 }
 
@@ -91,6 +91,9 @@ body {
 .navbar {
   height: 136px;
   padding-top: 40px;
+}
+.navbar__mobile {
+  display: none;
 }
 .navbar__hamburger {
   display: none;
