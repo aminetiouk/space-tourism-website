@@ -34,7 +34,9 @@ export default function Navbar({ page }: NavbarProps) {
 
           <div className="navbar__divider"></div>
 
-          <ul className={`navbar__menu text-blue-300 ${isOpen ? 'navbar__menu--open' : ''}`}>
+          <ul
+            className={`navbar__menu text-blue-300 ${isOpen ? 'navbar__menu--open' : ''}`}
+          >
             {NAV_LINKS.map(({ path, label, code, key }) => (
               <li key={key} className="navbar__menu-item">
                 <Link
@@ -69,7 +71,9 @@ export default function Navbar({ page }: NavbarProps) {
             />
           </button>
 
-          <ul className={`navbar__mobile-menu ${isOpen ? 'navbar__menu-mobile--open' : ''}`}>
+          <ul
+            className={`navbar__mobile-menu ${isOpen ? 'navbar__menu-mobile--open' : ''}`}
+          >
             {NAV_LINKS.map(({ path, label, code, key }) => (
               <li key={key} className="navbar__mobile-menu-item">
                 <Link
@@ -77,7 +81,8 @@ export default function Navbar({ page }: NavbarProps) {
                   className={`navbar__mobile-link ${page === key ? 'navbar__mobile-link--active' : ''}`}
                   // onClick={() => setIsOpen(false)}
                 >
-                  <span className="navbar__mobile-link-code">{code}</span> {label}
+                  <span className="navbar__mobile-link-code">{code}</span>{' '}
+                  {label}
                 </Link>
               </li>
             ))}
