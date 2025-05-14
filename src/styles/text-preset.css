@@ -181,7 +181,7 @@
 }
 
 /* Text Presets mobile */
-@media (max-width: 530px) {
+@media (max-width: 500px) {
   .text-preset-1 {
     font-family: 'Bellefair', serif;
     font-size: 80px;
