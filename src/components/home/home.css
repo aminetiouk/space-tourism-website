@@ -2,8 +2,8 @@
 
 .home__container {
   height: calc(100vh - var(--lh_navbar));
-  padding: 128px 0;
-  max-width: 1110px;
+  padding: 8rem 0; /* 128px */
+  max-width: 69.375rem; /* 1110px */
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -13,7 +13,7 @@
 .home__content {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 1.5rem; /* 24px */
 }
 
 .home__cta {
@@ -28,8 +28,8 @@
   justify-content: center;
   color: var(--blue-900);
   background-color: var(--white);
-  height: 272px;
-  width: 272px;
+  height: 17rem; /* 272px */
+  width: 17rem; /* 272px */
   border-radius: 50%;
   transition: all 1s ease-out;
   cursor: pointer;
@@ -37,8 +37,8 @@
 
 .home__button::before {
   content: '';
-  height: 420px;
-  width: 420px;
+  height: 26.25rem; /* 420px */
+  width: 26.25rem; /* 420px */
   background-color: rgba(255, 255, 255);
   position: absolute;
   border-radius: 50%;
@@ -61,11 +61,11 @@
     align-items: center;
     height: calc(100vh - var(--mh_navbar));
     width: 100vw;
-    padding: 128px 40px;
+    padding: 8rem 2.5rem; /* 128px 40px */
     justify-content: space-between;
   }
   .home__content {
-    max-width: 512px;
+    max-width: 32rem; /* 512px */
     align-items: center;
     text-align: center;
   }
@@ -73,20 +73,20 @@
     place-self: center;
   }
   .home__button::before {
-    height: 250px;
-    width: 250px;
+    height: 15.625rem; /* 250px */
+    width: 15.625rem; /* 250px */
   }
 }
 
 @media (max-width: 820px) {
   .home__container {
     height: calc(100vh - var(--sh_navbar));
-    padding: 24px;
+    padding: 1.5rem; /* 24px */
     justify-content: center;
     overflow: hidden;
   }
   .home__content {
-    max-width: 512px;
+    max-width: 32rem; /* 512px */
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -101,14 +101,14 @@
     flex: 1;
   }
   .home__button {
-    height: 230px;
-    width: 230px;
+    height: 14.375rem; /* 230px */
+    width: 14.375rem; /* 230px */
   }
+}
 
-  @media (max-width: 430px) {
-    .home__button {
-      height: 144px;
-      width: 144px;
-    }
+@media (max-width: 430px) {
+  .home__button {
+    height: 9rem; /* 144px */
+    width: 9rem; /* 144px */
   }
 }
