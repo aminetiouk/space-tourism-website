@@ -83,7 +83,7 @@
 }
 
 /* Text Presets tablet large*/
-@media (max-width: 1170px) {
+/* @media (max-width: 1275px) {
   .text-preset-2 {
     font-family: 'Bellefair', serif;
     font-size: 80px;
@@ -121,7 +121,6 @@
     font-style: normal;
   }
 
-  /* Page Title */
   .page__number {
     font-family: 'Barlow Condensed';
     font-size: 20px;
@@ -130,10 +129,10 @@
     opacity: 0.25;
     letter-spacing: 4.72px;
   }
-}
+} 
 
 /* Text Presets tablet */
-@media (max-width: 768px) {
+@media (max-width: 975px) {
   .text-preset-2 {
     font-family: 'Bellefair', serif;
     font-size: 80px;
