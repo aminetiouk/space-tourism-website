@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 interface NavbarProps {
@@ -19,13 +19,16 @@ const NAV_LINKS = [
 
 export default function Navbar({ page }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const mobileMenuRef = useRef<HTMLUListElement>(null);
+  const hamburgerRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
       if (
-        !target.closest('.navbar__mobile-menu') &&
-        !target.closest('.navbar__hamburger')
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(e.target as Node) &&
+        hamburgerRef.current &&
+        !hamburgerRef.current.contains(e.target as Node)
       ) {
         setIsOpen(false);
       }
@@ -77,6 +80,7 @@ export default function Navbar({ page }: NavbarProps) {
           </Link>
 
           <button
+            ref={hamburgerRef}
             className="navbar__hamburger"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
@@ -88,6 +92,7 @@ export default function Navbar({ page }: NavbarProps) {
           </button>
 
           <ul
+            ref={mobileMenuRef}
             className={`navbar__mobile-menu ${isOpen ? 'navbar__menu-mobile--open' : ''}`}
           >
             {NAV_LINKS.map(({ path, label, code, key }) => (
