@@ -1,8 +1,93 @@
-# React + Vite
+# 🚀 Space Tourism Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and interactive space tourism website built with **React + TypeScript** featuring **mobile-first design**, **smooth animations**, and **interactive navigation**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Screenshot
+
+![Screenshot of the website](./public/screenshot.png)
+
+## ✨ Features
+
+- 🌟 Responsive design with mobile-first approach
+- 📱 Interactive hamburger menu for mobile devices
+- 🎯 Click-outside functionality for improved UX
+- 💫 Smooth transitions and animations
+- 🖼️ Optimized image handling and responsive layouts
+- 🎨 Beautiful blur effects on scroll
+- 📐 Properly centered components and layouts
+- 🔄 Dynamic viewport handling
+
+---
+
+## 🧱 Project Structure
+
+```
+.
+├── src/
+│   ├── components/         # Reusable React components
+│   ├── styles/            # CSS modules and global styles
+│   ├── assets/           # Images and static assets
+│   └── App.tsx           # Main application component
+├── public/               # Public assets and images
+└── index.html           # Entry point
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/aminetiouk/space-tourism-website
+cd space-tourism-website
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run locally
+
+```bash
+npm run dev
+```
+
+The app should be running at [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 🧪 Technologies Used
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- CSS Modules
+- Modern CSS Features (Flexbox, Grid, etc.)
+- Responsive Design Principles
+
+---
+
+## 🧹 Scripts
+
+| Command           | Description              |
+| ----------------- | ------------------------ |
+| `npm run dev`     | Start development server |
+| `npm run build`   | Build for production     |
+| `npm run preview` | Preview production build |
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 🙌 Acknowledgments
+
+Built with ❤️ using modern React patterns and responsive design best practices.
