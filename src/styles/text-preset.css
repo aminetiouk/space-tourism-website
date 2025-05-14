@@ -1,72 +1,72 @@
 /* Text Presets Desktop */
 .text-preset-1 {
   font-family: 'Bellefair', serif;
-  font-size: 144px;
+  font-size: 9rem; /* 144px */
 }
 
 .text-preset-2 {
   font-family: 'Bellefair', serif;
-  font-size: 96px;
+  font-size: 6rem; /* 96px */
   font-weight: 300;
   font-style: normal;
 }
 
 .text-preset-3 {
   font-family: 'Bellefair', serif;
-  font-size: 56px;
+  font-size: 3.5rem; /* 56px */
   font-weight: 300;
   font-style: normal;
 }
 
 .text-preset-4 {
   font-family: 'Bellefair', serif;
-  font-size: 32px;
+  font-size: 2rem; /* 32px */
   font-weight: 300;
   font-style: normal;
 }
 
 .text-preset-5 {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 28px;
+  font-size: 1.75rem; /* 28px */
   font-weight: 300;
   font-style: normal;
-  letter-spacing: 4px;
+  letter-spacing: 0.25rem; /* 4px */
 }
 
 .text-preset-6 {
   font-family: 'Bellefair', serif;
-  font-size: 28px;
+  font-size: 1.75rem; /* 28px */
   font-weight: 300;
   font-style: normal;
 }
 
 .text-preset-7 {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 14px;
-  letter-spacing: 2px;
+  font-size: 0.875rem; /* 14px */
+  letter-spacing: 0.125rem; /* 2px */
   font-weight: 300;
   font-style: normal;
 }
 
 .text-preset-8 {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 16px;
-  letter-spacing: 2px;
+  font-size: 1rem; /* 16px */
+  letter-spacing: 0.125rem; /* 2px */
   font-weight: 300;
   font-style: normal;
 }
 
 .text-preset-8-bold {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 16px;
-  letter-spacing: 2.7px;
+  font-size: 1rem; /* 16px */
+  letter-spacing: 0.16875rem; /* 2.7px */
   font-weight: 700;
   font-style: normal;
 }
 
 .text-preset-9 {
   font-family: 'Barlow', sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px */
   line-height: 1.8;
   font-weight: 300;
   font-style: normal;
@@ -75,47 +75,47 @@
 /* Page Title */
 .page__number {
   font-family: 'Barlow Condensed';
-  font-size: 28px;
+  font-size: 1.75rem; /* 28px */
   font-weight: 700;
   color: var(--white);
   opacity: 0.25;
-  letter-spacing: 4.72px;
+  letter-spacing: 0.295rem; /* 4.72px */
 }
 
 /* Text Presets tablet */
 @media (max-width: 975px) {
   .text-preset-2 {
     font-family: 'Bellefair', serif;
-    font-size: 80px;
+    font-size: 5rem; /* 80px */
     font-weight: 300;
     font-style: normal;
   }
 
   .text-preset-3 {
     font-family: 'Bellefair', serif;
-    font-size: 40px;
+    font-size: 2.5rem; /* 40px */
     font-weight: 300;
     font-style: normal;
   }
 
   .text-preset-4 {
     font-family: 'Bellefair', serif;
-    font-size: 24px;
+    font-size: 1.5rem; /* 24px */
     font-weight: 300;
     font-style: normal;
   }
 
   .text-preset-5 {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem; /* 20px */
     font-weight: 300;
     font-style: normal;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem; /* 2px */
   }
 
   .text-preset-9 {
     font-family: 'Barlow', sans-serif;
-    font-size: 16px;
+    font-size: 1rem; /* 16px */
     line-height: 1.8;
     font-weight: 300;
     font-style: normal;
@@ -123,11 +123,11 @@
   /* Page Title */
   .page__number {
     font-family: 'Barlow Condensed';
-    font-size: 20px;
+    font-size: 1.25rem; /* 20px */
     font-weight: 700;
     color: var(--white);
     opacity: 0.25;
-    letter-spacing: 4.72px;
+    letter-spacing: 0.295rem; /* 4.72px */
   }
 }
 
@@ -135,56 +135,56 @@
 @media (max-width: 500px) {
   .text-preset-1 {
     font-family: 'Bellefair', serif;
-    font-size: 80px;
+    font-size: 5rem; /* 80px */
   }
 
   .text-preset-2 {
     font-family: 'Bellefair', serif;
-    font-size: 56px;
+    font-size: 3.5rem; /* 56px */
     font-weight: 300;
     font-style: normal;
   }
 
   .text-preset-3 {
     font-family: 'Bellefair', serif;
-    font-size: 24px;
+    font-size: 1.5rem; /* 24px */
     font-weight: 300;
     font-style: normal;
   }
 
   .text-preset-4 {
     font-family: 'Bellefair', serif;
-    font-size: 18px;
+    font-size: 1.125rem; /* 18px */
     font-weight: 300;
     font-style: normal;
   }
 
   .text-preset-5 {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 16px;
-    letter-spacing: 2px;
+    font-size: 1rem; /* 16px */
+    letter-spacing: 0.125rem; /* 2px */
     font-weight: 300;
     font-style: normal;
   }
   .text-preset-6 {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 16px;
-    letter-spacing: 2px;
+    font-size: 1rem; /* 16px */
+    letter-spacing: 0.125rem; /* 2px */
     font-weight: 300;
     font-style: normal;
   }
 
   .text-preset-8 {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 14px;
-    letter-spacing: 2px;
+    font-size: 0.875rem; /* 14px */
+    letter-spacing: 0.125rem; /* 2px */
     font-weight: 300;
     font-style: normal;
   }
 
   .text-preset-9 {
     font-family: 'Barlow', sans-serif;
-    font-size: 15px;
+    font-size: 0.9375rem; /* 15px */
     line-height: 1.8;
     font-weight: 300;
     font-style: normal;
@@ -192,67 +192,68 @@
   /* Page Title */
   .page__number {
     font-family: 'Barlow Condensed';
-    font-size: 16px;
+    font-size: 1rem; /* 16px */
     font-weight: 700;
     color: var(--white);
     opacity: 0.25;
-    letter-spacing: 4.72px;
+    letter-spacing: 0.295rem; /* 4.72px */
   }
 }
+
 /* Text Presets mobile */
 @media (max-width: 420px) {
   .text-preset-1 {
     font-family: 'Bellefair', serif;
-    font-size: 80px;
+    font-size: 5rem; /* 80px */
   }
 
   .text-preset-2 {
     font-family: 'Bellefair', serif;
-    font-size: 56px;
+    font-size: 3.5rem; /* 56px */
     font-weight: 300;
     font-style: normal;
   }
 
   .text-preset-3 {
     font-family: 'Bellefair', serif;
-    font-size: 24px;
+    font-size: 1.5rem; /* 24px */
     font-weight: 300;
     font-style: normal;
   }
 
   .text-preset-4 {
     font-family: 'Bellefair', serif;
-    font-size: 18px;
+    font-size: 1.125rem; /* 18px */
     font-weight: 300;
     font-style: normal;
   }
 
   .text-preset-5 {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 16px;
-    letter-spacing: 2px;
+    font-size: 1rem; /* 16px */
+    letter-spacing: 0.125rem; /* 2px */
     font-weight: 300;
     font-style: normal;
   }
   .text-preset-6 {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 16px;
-    letter-spacing: 2px;
+    font-size: 1rem; /* 16px */
+    letter-spacing: 0.125rem; /* 2px */
     font-weight: 300;
     font-style: normal;
   }
 
   .text-preset-8 {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 14px;
-    letter-spacing: 2px;
+    font-size: 0.875rem; /* 14px */
+    letter-spacing: 0.125rem; /* 2px */
     font-weight: 300;
     font-style: normal;
   }
 
   .text-preset-9 {
     font-family: 'Barlow', sans-serif;
-    font-size: 15px;
+    font-size: 0.9375rem; /* 15px */
     line-height: 1.8;
     font-weight: 300;
     font-style: normal;
@@ -260,10 +261,10 @@
   /* Page Title */
   .page__number {
     font-family: 'Barlow Condensed';
-    font-size: 16px;
+    font-size: 1rem; /* 16px */
     font-weight: 700;
     color: var(--white);
     opacity: 0.25;
-    letter-spacing: 4.72px;
+    letter-spacing: 0.295rem; /* 4.72px */
   }
 }
