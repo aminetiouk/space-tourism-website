@@ -1,0 +1,217 @@
+/* NAVBAR */
+.navbar {
+  height: var(--lh_navbar);
+  padding-top: 40px;
+}
+.navbar__mobile {
+  display: none;
+}
+.navbar__hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  z-index: 99999;
+}
+
+.navbar__container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.navbar__logo {
+  height: 48px;
+  width: 48px;
+  margin: 0 64px;
+}
+.navbar__divider {
+  height: 1px;
+  background-color: #979797;
+  opacity: 0.25;
+  width: 550px;
+  position: absolute;
+  margin-left: 176px;
+  margin-right: auto;
+  z-index: 10;
+}
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  padding: 0 70px 0 160px;
+  gap: 48px;
+  margin-left: auto;
+  height: var(--mh_navbar);
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+}
+.navbar__menu-item {
+  text-transform: uppercase;
+  height: 100%;
+  color: var(--blue-300);
+  position: relative;
+  transition: color 0.3s ease-out;
+}
+.navbar__menu-item:hover {
+  color: var(--white);
+}
+.navbar__menu-item::after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  bottom: 0;
+  transform: scaleX(0);
+  transition: all 0.3s ease-out;
+}
+.navbar__menu-item:hover:after {
+  transform: scaleX(1);
+}
+.navbar__link {
+  height: 100%;
+  display: flex;
+  column-gap: 12px;
+  align-items: center;
+}
+.navbar__link--active {
+  color: var(--white);
+}
+.navbar__link--active::before {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: var(--white);
+  position: absolute;
+  bottom: 0;
+}
+.navbar__link-code {
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+@media (max-width: 1275px) {
+  .navbar {
+    height: var(--mh_navbar);
+    padding-top: 0px;
+  }
+}
+@media (max-width: 1290px) {
+  .navbar__divider { width: 330px; }
+}
+@media (max-width: 1170px) {
+  .navbar__divider { width: 240px; }
+}
+@media (max-width: 1110px) {
+  .navbar__divider { display: none; }
+}
+
+/* MOBILE NAVIGATION */
+@media (max-width: 975px) {
+  .navbar__mobile {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar__mobile-container {
+    height: var(--sh_navbar);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 40px;
+  }
+
+  .navbar__hamburger,
+  .navbar__mobile-logo,
+  .navbar__mobile-logo-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar__mobile-menu {
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 136px 0 0 32px;
+    margin-left: 50%;
+    gap: 32px;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(18px);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 99;
+  }
+
+  .navbar__menu-mobile--open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+
+  .navbar__mobile-menu-item {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    position: relative;
+  }
+
+  .navbar__mobile-link {
+    display: grid;
+    grid-template-columns: 2ch auto;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .navbar__mobile-link-code {
+    text-align: right;
+    font-weight: 700;
+  }
+
+  .navbar__mobile-link--active::after {
+    content: '';
+    width: 3px;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .navbar__divider {
+    width: 280px;
+  }
+
+  .navbar__menu {
+    padding: 0 40px;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .navbar__mobile-menu {
+    margin-left: 30%;
+  }
+  .navbar__mobile-logo {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar__mobile-menu {
+    margin-left: 35%;
+  }
+}
+
