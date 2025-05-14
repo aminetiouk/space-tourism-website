@@ -7,7 +7,6 @@ import './styles/global.css';
 import './styles/text-preset.css';
 import './components/background/background.css'
 import './components/home/home.css'
-import './components/navbar/mobile-nav.css'
 import './components/navbar/navbar.css'
 import './components/destination/destination.css'
 import './components/crew/crew.css'
