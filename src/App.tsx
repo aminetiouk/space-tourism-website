@@ -1,11 +1,11 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
-import Home from './components/Home';
-import Crew from './components/Crew';
-import Technology from './components/Technology';
-import Destination from './components/Destination';
-import Background from './components/Background';
-import Navbar from './components/Navbar';
 import { AnimatePresence } from 'framer-motion';
+import Background from './components/background/Background';
+import Navbar from './components/navbar/Navbar';
+import Home from './components/home/Home';
+import Destination from './components/destination/Destination';
+import Crew from './components/crew/Crew';
+import Technology from './components/technology/Technology';
 
 function App() {
   const location = useLocation();
