@@ -46,6 +46,8 @@ input {
   --blue-900: #0b0d17;
   --blue-300: #d0d6f9;
   --white: #ffffff;
+  --lh_navbar: 136px;
+  --mh_navbar: 96px;
 }
 
 body {
@@ -90,7 +92,7 @@ body {
 /* NavBar */
 
 .navbar {
-  height: 136px;
+  height: var(--lh_navbar);
   padding-top: 40px;
 }
 .navbar__mobile {
@@ -131,7 +133,7 @@ body {
   padding: 0 70px 0 160px;
   gap: 48px;
   margin-left: auto;
-  height: 96px;
+  height: var(--mh_navbar);
   background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(15px);
 }
@@ -183,7 +185,7 @@ body {
 /* Home */
 
 .home__container {
-  height: calc(100vh - 96px - 40px);
+  height: calc(100vh - var(--lh_navbar));
   padding: 128px 0;
   max-width: 1110px;
   margin: 0 auto;
@@ -240,7 +242,7 @@ body {
 
 .destination {
   max-width: 1110px;
-  height: calc(100vh - 136px);
+  height: calc(100vh - var(--lh_navbar));
   margin: 0 auto;
   padding: 48px 0;
   display: flex;
@@ -344,7 +346,7 @@ body {
   padding: 48px 0;
   width: 1110px;
   margin: 0 auto;
-  height: calc(100% - 96px - 40px);
+  height: calc(100% - var(--lh_navbar));
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -378,6 +380,8 @@ body {
   grid-row: 1/3;
   align-self: center;
   justify-self: end;
+}
+.crew__photo-img {
   -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
@@ -459,14 +463,14 @@ body {
 /* Technology */
 .technology {
   padding: 48px 0;
-  height: calc(100vh - 136px);
+  height: calc(100vh - var(--lh_navbar));
   margin-left: auto;
   max-width: 1275px;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-.technology__title{
+.technology__title {
   padding-left: 0px;
 }
 .technology__layout {
