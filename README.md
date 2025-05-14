@@ -2,6 +2,10 @@
 
 A modern, responsive, and interactive space tourism website built with **React + TypeScript** featuring **mobile-first design**, **smooth animations**, and **interactive navigation**.
 
+## 🌐 Live Demo
+
+Check out the live demo: [Space Tourism Website](https://space-tourism-two-delta.vercel.app/)
+
 ---
 
 ## 📸 Screenshot
