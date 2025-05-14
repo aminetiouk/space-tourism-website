@@ -7,23 +7,22 @@ html {
   scrollbar-width: none; /* Firefox */
 }
 
-
-@media (max-width: 1360px) {
+@media (max-width: 1390px) {
   .navbar__divider {
     width: 450px;
   }
 }
-@media (max-width: 1250px) {
+@media (max-width: 1290px) {
   .navbar__divider {
     width: 330px;
   }
 }
-@media (max-width: 1130px) {
+@media (max-width: 1170px) {
   .navbar__divider {
     width: 240px;
   }
 }
-@media (max-width: 1050px) {
+@media (max-width: 1110px) {
   .navbar__divider {
     display: none;
   }
@@ -32,7 +31,7 @@ html {
 /* ----------------------------------------------------- */
 /*                    Large Screen                       */
 /* ----------------------------------------------------- */
-@media (max-width: 1170px) {
+@media (max-width: 1275px) {
   .background--home {
     background-image: url('/assets/home/background-home-tablet.jpg');
   }
@@ -49,97 +48,10 @@ html {
   .container {
     position: relative;
   }
-  .navbar__mobile {
-    display: block;
-  }
-  .navbar {
-    display: none;
-  }
-  .navbar__mobile-container {
-    height: 88px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 24px;
-  }
-  .navbar__hamburger {
-    display: block;
-    position: fixed;
-    right: 24px;
-  }
-  .navbar__mobile-logo {
-    width: 40px;
-    height: 40px;
-    margin: 0;
-    position: fixed;
-    left: 24px;
-    top: 24px;
-  }
-  .navbar__mobile-menu {
-    position: fixed;
-    text-transform: uppercase;
-    inset: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    padding: 136px 0 0 32px;
-    margin-left: 30%;
-    z-index: 99;
-    background-color: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(25px);
 
-    opacity: 0;
-    pointer-events: none;
-    transform: translateX(20px);
-    transition:
-      opacity 0.3s ease,
-      transform 0.3s ease;
-  }
-  .navbar__menu-mobile--open {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateX(0);
-  }
-  .navbar__mobile-menu-item {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 16px;
-    letter-spacing: 2px;
-    font-weight: 300;
-    font-style: normal;
-    position: relative;
-  }
-  .navbar__mobile-link--active::after {
-    content: '';
-    height: 100%;
-    width: 3px;
-    background-color: rgba(255, 255, 255);
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .navbar__mobile-link {
-    display: grid;
-    grid-template-columns: 2ch auto;
-    gap: 1rem;
-    align-items: center;
-  }
-  .navbar__mobile-link-code {
-    text-align: right;
-    font-weight: 700;
-  }
-  .navbar_desktop {
-    padding-top: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .navbar__divider {
-    width: 280px;
-  }
-  .navbar__menu {
-    padding: 0 40px;
-    justify-content: end;
-    width: 100%;
+  .navbar {
+    height: 96px;
+    padding-top: 0px;
   }
 
   .home__container {
@@ -271,7 +183,7 @@ html {
     flex-direction: column;
     justify-content: start;
     column-gap: 0px;
-    padding-top: 44px;
+    /* padding-top: 44px; */
     gap: 32px;
   }
   .technology__wrapper {
@@ -291,7 +203,110 @@ html {
     text-align: center;
   }
   .technology__media {
-    height: 310px;
+    height: 100%;
+  }
+}
+/* ----------------------------------------------------- */
+/*                    Large Tablet Screen                       */
+/* ----------------------------------------------------- */
+@media (max-width: 1024) {
+}
+/* ----------------------------------------------------- */
+/*                    Tablet Screen                      */
+/* ----------------------------------------------------- */
+
+@media (max-width: 975px) {
+  .navbar__mobile {
+    display: block;
+  }
+  .navbar {
+    display: none;
+  }
+  .navbar__mobile-container {
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+  }
+  .navbar__hamburger {
+    display: block;
+    position: fixed;
+    right: 24px;
+  }
+  .navbar__mobile-logo {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar__mobile-menu {
+    position: fixed;
+    text-transform: uppercase;
+    inset: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 136px 0 0 32px;
+    margin-left: 60%;
+    z-index: 99;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(18px);
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(20px);
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+  .navbar__menu-mobile--open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+  .navbar__mobile-menu-item {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-style: normal;
+    position: relative;
+  }
+  .navbar__mobile-link--active::after {
+    content: '';
+    height: 100%;
+    width: 3px;
+    background-color: rgba(255, 255, 255);
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar__mobile-link {
+    display: grid;
+    grid-template-columns: 2ch auto;
+    gap: 1rem;
+    align-items: center;
+  }
+  .navbar__mobile-link-code {
+    text-align: right;
+    font-weight: 700;
+  }
+  .navbar_desktop {
+    padding-top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .navbar__divider {
+    width: 280px;
+  }
+  .navbar__menu {
+    padding: 0 40px;
+    justify-content: end;
+    width: 100%;
   }
 }
 
@@ -310,10 +325,6 @@ html {
   }
   .background--technology {
     background-image: url('/assets/technology/background-technology-mobile.jpg');
-  }
-
-  .navbar__mobile-menu{
-    margin-left: 40%;
   }
 
   .home__container {
@@ -413,7 +424,7 @@ html {
   .crew__navigation {
     order: 2;
   }
-  .crew__nav-ring{
+  .crew__nav-ring {
     width: 25px;
     height: 25px;
   }
@@ -421,7 +432,7 @@ html {
     justify-content: center;
     width: 30px;
   }
-  .crew__nav-button{
+  .crew__nav-button {
     width: 15px;
     height: 15px;
   }
@@ -453,5 +464,37 @@ html {
   .technology__media {
     overflow: hidden;
     height: 258px;
+  }
+}
+
+/* ----------------------------------------------------- */
+/*                    Mobile Screen                      */
+/* ----------------------------------------------------- */
+
+@media (max-width: 430px) {
+  .navbar__mobile-menu {
+    margin-left: 40%;
+  }
+  .navbar__mobile-logo {
+    width: 30px;
+    height: 30px;
+  }
+  .technology__wrapper {
+    gap: 20px;
+  }
+  .navbar__mobile-container {
+    height: 60px;
+  }
+  .home__container {
+    height: calc(100vh - 60px);
+  }
+  .destination {
+    height: calc(100vh - 60px);
+  }
+  .crew {
+    height: calc(100vh - 60px);
+  }
+  .technology {
+    height: calc(100vh - 60px);
   }
 }
