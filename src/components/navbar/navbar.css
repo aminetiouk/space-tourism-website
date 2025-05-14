@@ -1,7 +1,7 @@
 /* NAVBAR */
 .navbar {
   height: var(--lh_navbar);
-  padding-top: 40px;
+  padding-top: 2.5rem; /* 40px */
 }
 .navbar__mobile {
   display: none;
@@ -11,7 +11,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  width: 24px;
+  width: 1.5rem; /* 24px */
   z-index: 99999;
 }
 
@@ -21,29 +21,29 @@
   position: relative;
 }
 .navbar__logo {
-  height: 48px;
-  width: 48px;
-  margin: 0 64px;
+  height: 3rem; /* 48px */
+  width: 3rem; /* 48px */
+  margin: 0 4rem; /* 64px */
 }
 .navbar__divider {
   height: 1px;
   background-color: #979797;
   opacity: 0.25;
-  width: 550px;
+  width: 34.375rem; /* 550px */
   position: absolute;
-  margin-left: 176px;
+  margin-left: 11rem; /* 176px */
   margin-right: auto;
   z-index: 10;
 }
 .navbar__menu {
   display: flex;
   align-items: center;
-  padding: 0 70px 0 160px;
-  gap: 48px;
+  padding: 0 4.375rem 0 10rem; /* 70px 160px */
+  gap: 3rem; /* 48px */
   margin-left: auto;
   height: var(--mh_navbar);
   background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(0.9375rem); /* 15px */
 }
 .navbar__menu-item {
   text-transform: uppercase;
@@ -58,7 +58,7 @@
 .navbar__menu-item::after {
   content: '';
   width: 100%;
-  height: 3px;
+  height: 0.1875rem; /* 3px */
   background-color: rgba(255, 255, 255, 0.3);
   position: absolute;
   bottom: 0;
@@ -71,7 +71,7 @@
 .navbar__link {
   height: 100%;
   display: flex;
-  column-gap: 12px;
+  column-gap: 0.75rem; /* 12px */
   align-items: center;
 }
 .navbar__link--active {
@@ -80,26 +80,26 @@
 .navbar__link--active::before {
   content: '';
   width: 100%;
-  height: 3px;
+  height: 0.1875rem; /* 3px */
   background-color: var(--white);
   position: absolute;
   bottom: 0;
 }
 .navbar__link-code {
   font-weight: bold;
-  letter-spacing: 3px;
+  letter-spacing: 0.1875rem; /* 3px */
 }
 @media (max-width: 1275px) {
   .navbar {
     height: var(--mh_navbar);
-    padding-top: 0px;
+    padding-top: 0;
   }
 }
 @media (max-width: 1290px) {
-  .navbar__divider { width: 330px; }
+  .navbar__divider { width: 20.625rem; /* 330px */ }
 }
 @media (max-width: 1170px) {
-  .navbar__divider { width: 240px; }
+  .navbar__divider { width: 15rem; /* 240px */ }
 }
 @media (max-width: 1110px) {
   .navbar__divider { display: none; }
@@ -120,14 +120,14 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 0 2.5rem; /* 40px */
   }
 
   .navbar__hamburger,
   .navbar__mobile-logo,
   .navbar__mobile-logo-link {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem; /* 40px */
+    height: 2.5rem; /* 40px */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,15 +139,15 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 136px 0 0 32px;
+    padding: 8.5rem 0 0 2rem; /* 136px 32px */
     margin-left: 50%;
-    gap: 32px;
+    gap: 2rem; /* 32px */
     text-transform: uppercase;
     background-color: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(1.125rem); /* 18px */
     opacity: 0;
     pointer-events: none;
-    transform: translateX(20px);
+    transform: translateX(1.25rem); /* 20px */
     transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 99;
   }
@@ -160,9 +160,9 @@
 
   .navbar__mobile-menu-item {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 16px;
+    font-size: 1rem; /* 16px */
     font-weight: 300;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem; /* 2px */
     position: relative;
   }
 
@@ -180,7 +180,7 @@
 
   .navbar__mobile-link--active::after {
     content: '';
-    width: 3px;
+    width: 0.1875rem; /* 3px */
     height: 100%;
     background-color: #fff;
     position: absolute;
@@ -189,11 +189,11 @@
   }
 
   .navbar__divider {
-    width: 280px;
+    width: 17.5rem; /* 280px */
   }
 
   .navbar__menu {
-    padding: 0 40px;
+    padding: 0 2.5rem; /* 40px */
     justify-content: flex-end;
     width: 100%;
   }
@@ -204,8 +204,8 @@
     margin-left: 30%;
   }
   .navbar__mobile-logo {
-    width: 30px;
-    height: 30px;
+    width: 1.875rem; /* 30px */
+    height: 1.875rem; /* 30px */
   }
 }
 
@@ -214,4 +214,3 @@
     margin-left: 35%;
   }
 }
-
