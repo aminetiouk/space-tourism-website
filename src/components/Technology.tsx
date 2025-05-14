@@ -13,7 +13,11 @@ export default function Technology() {
 
   return (
     <main className="technology">
-      <Title text="SPACE LAUNCH 101" number="03" className="technology__title" />
+      <Title
+        text="SPACE LAUNCH 101"
+        number="03"
+        className="technology__title"
+      />
 
       <div className="technology__layout">
         <div className="technology__wrapper">
@@ -66,6 +70,10 @@ export default function Technology() {
         </div>
         <PageWrapper key={`technology-image-${currentIndex}`}>
           <picture className="technology__media">
+            <source
+              media="(max-width: 820px)"
+              srcSet={`/assets/technology/${current.images.portrait.split('/').pop()}`}
+            />
             <source
               media="(max-width: 1170px)"
               srcSet={`/assets/technology/${current.images.landscape.split('/').pop()}`}
