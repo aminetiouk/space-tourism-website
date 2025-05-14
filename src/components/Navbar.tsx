@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 interface NavbarProps {
@@ -19,6 +19,22 @@ const NAV_LINKS = [
 
 export default function Navbar({ page }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (
+        !target.closest('.navbar__mobile-menu') &&
+        !target.closest('.navbar__hamburger')
+      ) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('click', handleClick);
+    return () => {
+      document.removeEventListener('click', handleClick);
+    };
+  }, []);
 
   return (
     <>
@@ -79,7 +95,7 @@ export default function Navbar({ page }: NavbarProps) {
                 <Link
                   to={path}
                   className={`navbar__mobile-link ${page === key ? 'navbar__mobile-link--active' : ''}`}
-                  // onClick={() => setIsOpen(false)}
+                  onClick={() => setIsOpen(false)}
                 >
                   <span className="navbar__mobile-link-code">{code}</span>{' '}
                   {label}
