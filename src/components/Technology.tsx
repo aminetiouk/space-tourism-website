@@ -75,7 +75,7 @@ export default function Technology() {
               srcSet={`/assets/technology/${current.images.portrait.split('/').pop()}`}
             />
             <source
-              media="(max-width: 1170px)"
+              media="(max-width: 1275px)"
               srcSet={`/assets/technology/${current.images.landscape.split('/').pop()}`}
             />
             <img
