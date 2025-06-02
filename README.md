@@ -8,9 +8,9 @@ Check out the live demo: [Space Tourism Website](https://space-tourism-two-delta
 
 ---
 
-## 📸 Screenshot
+## 🎥 GIF Demo
 
-![Screenshot of the website](./public/screenshot.png)
+![Screen Recording](public/screen-recording.gif)
 
 ## ✨ Features
 
